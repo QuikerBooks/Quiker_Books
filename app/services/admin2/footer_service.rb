@@ -8,9 +8,10 @@ class Admin2::FooterService
   end
 
   def plan_footer_disabled?
-    return true unless plan
-
-    !plan.dig(:features, :footer).present?
+    false
+    # return true unless plan
+    #
+    # !plan.dig(:features, :footer).present?
   end
 
   def footer_menu_links # rubocop:disable Rails/Delegate
