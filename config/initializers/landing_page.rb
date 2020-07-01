@@ -156,31 +156,31 @@ module CustomLandingPage
       "id": "three_column_info_with_icons_and_buttons",
       "kind": "info",
       "variation": "multi_column",
-      "title": "Three column info with icons and buttons",
+      "title": "Please choose your University.",
       "button_color": {"type": "marketplace_data", "id": "primary_color"},
       "button_color_hover": {"type": "marketplace_data", "id": "primary_color_darken"},
       "icon_color": {"type": "marketplace_data", "id": "primary_color"},
       "columns": [
         {
-          "title": "Column 1",
+          "title": "York University",
           "icon": "quill",
-          "paragraph": "Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.",
-          "button_title": "Go to sharetribe.com",
-          "button_path": {"value": "https://www.sharetribe.com"}
+          "paragraph": "Find more about York University's courses.",
+          "button_title": "Go to York University",
+          "button_path": {"value": "https://quikerbooks.ca/s?category=york-university"}
         },
         {
-          "title": "Column 2",
+          "title": "Ryerson University",
           "icon": "piggy-bank",
-          "paragraph": "Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.",
-          "button_title": "Go to sharetribe.com",
-          "button_path": {"value": "https://www.sharetribe.com"}
+          "paragraph": "Find more about Ryerson University's courses.",
+          "button_title": "Go to Ryerson University",
+          "button_path": {"value": "https://quikerbooks.ca/s?category=ryerson-university"}
         },
         {
-          "title": "Column 3",
+          "title": "All Universities",
           "icon": "globe-1",
-          "paragraph": "Paragraph. Curabitur blandit tempus porttitor. Nulla vitae elit libero, a pharetra augue. Vivamus sagittis lacus vel.",
-          "button_title": "Go to sharetribe.com",
-          "button_path": {"value": "https://www.sharetribe.com"}
+          "paragraph": "Explore and find All Universities courses.",
+          "button_title": "Go to All Universities",
+          "button_path": {"value": "https://quikerbooks.ca/s?category=all-universities"}
         }
       ]
     },
@@ -356,7 +356,7 @@ module CustomLandingPage
 
   "composition": [
     { "section": {"type": "sections", "id": "hero"}},
-    { "section": {"type": "sections", "id": "markdown_support"}},
+    { "section": {"type": "sections", "id": "three_column_info_with_icons_and_buttons"}},
     { "section": {"type": "sections", "id": "footer"}}
   ],
 
