@@ -30,8 +30,8 @@ section_style_class = hero_style_variations[s["background_image_variation"]]
     background-color: rgb(<%= s["search_button_color_hover"]["value"].join(",") %>);
   }
 <% end %>
-
-<section id="<%= section_id %>" class="<%= section_style_class %>">
+<div style="height: 330px;">
+  <section id="<%= section_id %>" class="<%= section_style_class %>">
   <div class="hero__content">
     <div class="hero__content-container">
       <% if community_context[:show_slogan] %>
@@ -107,3 +107,4 @@ section_style_class = hero_style_variations[s["background_image_variation"]]
     </div>
   </div>
 </section>
+</div>
