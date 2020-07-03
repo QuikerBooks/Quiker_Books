@@ -70,8 +70,9 @@
 
   .initiate-transaction-shipping-price-wrapper#insurance
     %span.initiate-transaction-shipping-price-label
-      = check_box_tag :checkbox_checked do
-        %span#insurance_fee "Include 20$ Insurance FEE"
+      %span#insurance_fee Include 20$ Insurance FEE
+      = check_box_tag :checkbox_checked
+
 
   - if is_author
     - unless has_buyer_fee
@@ -105,11 +106,3 @@
       %span.initiate-transaction-total-value#total
         = MoneyViewUtils.to_humanized(is_author ? seller_gets : total)
 
-  - content_for :extra_javascript do
-    :javascript
-      $('#insurance_fee').click(function(){
-        if($(this).is(':checked')){
-          var total_amount = parseInt(document.getElementById("total").innerText.split("$")[1])
-          document.getElementById("total").innerText  = "$" + total_amount+20;
-          }
-        });
