@@ -9,7 +9,7 @@ module CustomLandingPage
   "settings": {
     "marketplace_id": 9999,
     "locale": "en",
-    "sitename": "example"
+    "sitename": "quikcer-book"
   },
 
   "page": {

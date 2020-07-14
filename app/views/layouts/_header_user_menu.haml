@@ -1,12 +1,12 @@
 
 #header-user-toggle-menu.toggle-menu.header-toggle-menu-user.hidden
 
-  = link_to inbox_path do
-    = icon_map_tag(icons, "mail", ["icon-with-text"])
-    = t("layouts.conversations.messages")
-    - if unread_count > 0
-      .mobile-badge{:class => get_badge_class(unread_count)}
-        = unread_count
+  -#= link_to inbox_path do
+  -#  = icon_map_tag(icons, "mail", ["icon-with-text"])
+  -#  = t("layouts.conversations.messages")
+  -#  - if unread_count > 0
+  -#    .mobile-badge{:class => get_badge_class(unread_count)}
+  -#      = unread_count
 
   = link_to profile_path do
     = icon_map_tag(icons, "user", ["icon-with-text"])
