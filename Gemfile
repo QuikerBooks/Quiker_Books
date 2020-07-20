@@ -191,3 +191,5 @@ group :deployment do
   gem 'capistrano3-puma',   require: false
   gem 'capistrano-npm'
 end
+gem 'shipppit-canada-post'
+# gem 'canada-post-api'
