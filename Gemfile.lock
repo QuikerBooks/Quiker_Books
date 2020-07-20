@@ -1,4 +1,14 @@
 GIT
+  remote: https://github.com/ali-hassan/shipppit-canada-post.git
+  revision: 3d71d9cf2cdd506779a12f38e8e78f20a638bffb
+  branch: master
+  specs:
+    shipppit-canada-post (1.0.0)
+      activesupport
+      httparty
+      nokogiri
+
+GIT
   remote: https://github.com/ithouse/fake_stripe.git
   revision: 56fe73dc420d161ecf9842739af7d857031ca1b2
   ref: 56fe73dc420d161ecf9842739af7d857031ca1b2
@@ -113,10 +123,6 @@ GEM
     byebug (11.0.1)
     callsite (0.0.11)
     camertron-eprun (1.1.1)
-    canada-post-api (0.0.3)
-      activesupport
-      httparty
-      nokogiri
     capistrano (3.11.0)
       airbrussh (>= 1.0.0)
       i18n
@@ -686,7 +692,6 @@ DEPENDENCIES
   bcrypt (= 3.1.12)
   biz
   bootsnap
-  canada-post-api
   capistrano (= 3.11)
   capistrano-bundler
   capistrano-npm
@@ -776,6 +781,7 @@ DEPENDENCIES
   sass-rails (~> 5.0.6)
   select2-rails
   selenium-webdriver (~> 3.141.0)
+  shipppit-canada-post!
   sitemap_generator (~> 5.3.1)
   statesman (~> 7.1.0)
   stringex (~> 2.7.1)
