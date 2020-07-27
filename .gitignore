@@ -1,6 +1,7 @@
 .idea/*
 log/*
-log/capistrano.log
+#log/capistrano.log
+#log/capistrano.log
 .DS_Store
 db/*.sqlite3
 db/sphinx
