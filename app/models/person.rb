@@ -249,6 +249,11 @@ class Person < ApplicationRecord
     end
   end
 
+  #### Get Email
+  def get_email
+    emails.first.try(:address)
+  end
+
   # Creates a new email
   def email_attributes=(attributes)
     ActiveSupport::Deprecation.warn(

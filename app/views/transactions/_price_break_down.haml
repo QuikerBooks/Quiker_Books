@@ -41,6 +41,7 @@
             = l end_on, format: :long_with_abbr_day_name
             = "(#{pluralize(duration, t("listing_conversations.preauthorize.night"), t("listing_conversations.preauthorize.nights"))})"
 
+
   - elsif quantity.present? && localized_unit_type.present?
     .initiate-transaction-per-unit-wrapper
       %span.initiate-transaction-per-unit-label
@@ -68,10 +69,10 @@
       %span.initiate-transaction-shipping-price-value
         = MoneyViewUtils.to_humanized(shipping_price)
 
-  .initiate-transaction-shipping-price-wrapper#insurance
-    %span.initiate-transaction-shipping-price-label
-      %span#insurance_fee Include 20$ Insurance FEE
-      = check_box_tag :checkbox_checked
+  -#.initiate-transaction-shipping-price-wrapper#insurance
+  -#  %span.initiate-transaction-shipping-price-label
+  -#    %span#insurance_fee Include 20$ Insurance FEE
+  -#    = check_box_tag :checkbox_checked
 
 
   - if is_author
@@ -95,6 +96,26 @@
         = t("conversations.accept.buyer_service_fee_label")
       %span.initiate-transaction-sum-value
         = "#{is_author ? '-' : ''}#{MoneyViewUtils.to_humanized(buyer_fee)}"
+
+  .initiate-transaction-shipping-price-wrapper#insurance
+    %span.initiate-transaction-shipping-price-label
+      %span#insurance_fee Include 20$ Insurance FEE
+      = check_box_tag :checkbox_checked
+
+  .initiate-transaction-shipping-price-wrapper
+    - index = 1
+    - @rates.each do |rate|
+      .checkbox-input
+        %span.initiate-transaction-total-label
+          .modal-checkbox-block.rate_price
+            = check_box_tag :checkbox
+            %span
+              #{rate[:service]}             #{rate[:carrier]}
+        %span.initiate-transaction-total-value#price
+          %span{ :style => "font-weight: bold;" }
+            $#{rate[:rate]}
+        %br
+
 
   - if total.present?
     .initiate-transaction-total-wrapper
