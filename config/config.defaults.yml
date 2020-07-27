@@ -374,7 +374,7 @@ default: &default_settings
   # - /landing_page/%{sitename}/
   # - https://s3.amazonaws.com/my-bucket/sites/%{sitename}/
   #
-  clp_asset_url: "landing_page/"
+#  clp_asset_url: "landing_page/"
 
   #####################
   # Custom landing page
@@ -385,7 +385,7 @@ default: &default_settings
   # The hosted version stores the landing page data in the database but for single
   # marketplace OS installations the database doesn't bring any benifits. That's why
   # the static version is used instead of database in OS installations.
-  clp_static_enabled: false
+  clp_static_enabled: true
 
   # Landing page is cached heavily.
   #
@@ -398,7 +398,7 @@ default: &default_settings
   clp_cache_time: 900
 
   # Display mention of custom landing page in admin panel
-  show_landing_page_admin: false
+  show_landing_page_admin: true
   custom_landing_page_marketing_site_url: "https://www.example.com/landingpage/"
 
   #######

@@ -172,7 +172,7 @@ gem 'redcarpet', '~> 3.4.0'
 
 gem 'intercom'
 
-gem 'twitter_cldr'
+# gem 'twitter_cldr'
 gem 'memoist'
 gem 'biz'
 gem 'ffi', '>= 1.9.25'
@@ -191,3 +191,5 @@ group :deployment do
   gem 'capistrano3-puma',   require: false
   gem 'capistrano-npm'
 end
+gem 'shipppit-canada-post', :git => 'https://github.com/ali-hassan/shipppit-canada-post.git', branch: "master"
+# gem 'canada-post-api'

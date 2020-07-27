@@ -484,7 +484,8 @@ CREATE TABLE `custom_field_option_selections` (
 DROP TABLE IF EXISTS `custom_field_option_titles`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `custom_field_option_titles` (
+CREATE TABLE `
+` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `value` varchar(255) DEFAULT NULL,
   `locale` varchar(255) DEFAULT NULL,
