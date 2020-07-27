@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.0"
 
-set :repo_url,        'git@github.com:ali-hassan/quicker_book.git'
+set :repo_url,        'git@github.com:QuikerBooks/Quiker_Books.git'
 set :application,     'quicker_books'
 set :user,            'ubuntu'
 set :puma_threads,    [4, 16]
