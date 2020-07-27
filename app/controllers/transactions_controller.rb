@@ -506,87 +506,19 @@ class TransactionsController < ApplicationController
     -d 'shipment[from_address][street2]=#{ author_canada_post_api_hsh[:street_address] }' \
     -d 'shipment[from_address][city]=#{ author_canada_post_api_hsh[:city] }' \
     -d 'shipment[from_address][state]=#{ author_canada_post_api_hsh[:state] }' \
-    -d 'shipment[from_address][zip]=R#{ author_canada_post_api_hsh[:zipcode] }' \
+    -d 'shipment[from_address][zip]=#{ author_canada_post_api_hsh[:zipcode] }' \
     -d 'shipment[from_address][country]=#{ author_canada_post_api_hsh[:country] }' \
     -d 'shipment[from_address][phone]=#{ @listing.author.phone_number }' \
     -d 'shipment[from_address][email]=#{ @listing.author.email }' \
     -d 'shipment[parcel][length]=#{ parcel_hsh[:length] }' \
     -d 'shipment[parcel][width]=#{ parcel_hsh[:width] }' \
     -d 'shipment[parcel][height]=#{ parcel_hsh[:height] }' \
-    -d 'shipment[parcel][weight]=#{ parcel_hsh[:width] }'`
+    -d 'shipment[parcel][weight]=#{ parcel_hsh[:width] }' \
+    -d 'shipment[customs_info][id]=cstinfo_...'`
     puts @rates
-    @rates =
-        { "rates":[
-        {
-            "id":"rate_75c5d3f8ca2142f7bc787c722d391dfa",
-            "object":"Rate",
-            "created_at":"2020-07-24T21:01:58Z",
-            "updated_at":"2020-07-24T21:01:58Z",
-            "mode":"test",
-            "service":"ExpeditedParcel",
-            "carrier":"CanadaPost",
-            "rate":"24.14",
-            "currency":"CAD",
-
-            "delivery_days":7,
-            "delivery_date_guaranteed":true,
-            "est_delivery_days":7,
-            "shipment_id":"shp_ed8f93379bcd4dd1b20d880f2b6da342",
-            "carrier_account_id":"ca_2aa8a1f7eb69476896d233215362d454"
-        },
-        {
-            "id":"rate_ec1a739dcb1647cca26807183317d267",
-            "object":"Rate",
-            "created_at":"2020-07-24T21:01:58Z",
-            "updated_at":"2020-07-24T21:01:58Z",
-            "mode":"test",
-            "service":"Priority",
-            "carrier":"CanadaPost",
-            "rate":"86.53",
-            "currency":"CAD",
-            "delivery_days":3,
-            "delivery_date_guaranteed":true,
-            "est_delivery_days":3,
-            "shipment_id":"shp_ed8f93379bcd4dd1b20d880f2b6da342",
-            "carrier_account_id":"ca_2aa8a1f7eb69476896d233215362d454"
-        },
-        {
-            "id":"rate_9ac2e7bdd9e44180aab4c70cfe412bb5",
-            "object":"Rate",
-            "created_at":"2020-07-24T21:01:58Z",
-            "updated_at":"2020-07-24T21:01:58Z",
-            "mode":"test",
-            "service":"RegularParcel",
-            "carrier":"CanadaPost",
-            "rate":"23.20",
-            "currency":"CAD",
-
-            "delivery_days":8,
-
-            "delivery_date_guaranteed":false,
-            "est_delivery_days":8,
-            "shipment_id":"shp_ed8f93379bcd4dd1b20d880f2b6da342",
-            "carrier_account_id":"ca_2aa8a1f7eb69476896d233215362d454"
-        },
-        {
-            "id":"rate_b5c97def205843bb93ef308e62d5bb2e",
-            "object":"Rate",
-            "created_at":"2020-07-24T21:01:58Z",
-            "updated_at":"2020-07-24T21:01:58Z",
-            "mode":"test",
-            "service":"Xpresspost",
-            "carrier":"CanadaPost",
-            "rate":"57.75",
-            "currency":"CAD",
-
-            "delivery_days":3,
-            "delivery_date_guaranteed":true,
-            "est_delivery_days":3,
-            "shipment_id":"shp_ed8f93379bcd4dd1b20d880f2b6da342",
-            "carrier_account_id":"ca_2aa8a1f7eb69476896d233215362d454"
-        }
-    ]}
-    @rates = @rates[:rates].sort_by! { |k| k[:rate]}
+    puts "***********************************"
+    @rates = JSON.parse @rates.gsub('=>', ':')
+    @rates = @rates["rates"].sort_by! { |k| k["rate"]}
   end
 
   def prepare_hsh_for_canada_post

@@ -1,6 +1,6 @@
 $ ->
   $("#checkbox_checked").on "change", ->
-    total_amount = parseInt(document.getElementById("total").innerText.split("$")[1])
+    total_amount = parseFloat(document.getElementById("total").innerText.split("$")[1])
     if document.getElementById("checkbox_checked").checked
       amount = total_amount+20;
       document.getElementById("total").innerText  = "$" + amount

@@ -110,10 +110,10 @@
           .modal-checkbox-block.rate_price
             = check_box_tag :checkbox
             %span
-              #{rate[:service]}             #{rate[:carrier]}
+              #{rate["service"]}             #{rate["carrier"]}
         %span.initiate-transaction-total-value#price
-          %span{ :style => "font-weight: bold;" }
-            $#{rate[:rate]}
+          %span
+            $#{rate["rate"]}
         %br
 
 
