@@ -21,6 +21,8 @@ class TransactionsController < ApplicationController
     controller.ensure_logged_in t("layouts.notifications.you_must_log_in_to_do_a_transaction")
   end
 
+  before_action :get_rates, only: :new
+
   TransactionForm = EntityUtils.define_builder(
     [:listing_id, :fixnum, :to_integer, :mandatory],
     [:message, :string],
@@ -483,5 +485,70 @@ class TransactionsController < ApplicationController
 
   def transaction_process_tokens
     TransactionService::API::Api.process_tokens
+  end
+
+  def get_rates
+    canada_post_api_hsh         = prepare_hsh_for_canada_post
+    author_canada_post_api_hsh  = prepare_author_hsh_for_canada_post
+    parcel_hsh                  = from_address_values
+    @rates = `curl -X POST #{ APP_CONFIG.canada_post_url } \
+    -u "#{ APP_CONFIG.canada_post_api_key }": \
+    -d 'shipment[to_address][name]=#{ @current_user.full_name }' \
+    -d 'shipment[to_address][street1]=#{ canada_post_api_hsh[:shipping_street] }' \
+    -d 'shipment[to_address][city]=#{ canada_post_api_hsh[:shipping_city] }' \
+    -d 'shipment[to_address][state]=#{ canada_post_api_hsh[:shipping_state] }' \
+    -d 'shipment[to_address][zip]=#{ canada_post_api_hsh[:shipping_postal] }' \
+    -d 'shipment[to_address][country]=#{ canada_post_api_hsh[:shipping_country] }' \
+    -d 'shipment[to_address][phone]=#{ @current_user.phone_number }' \
+    -d 'shipment[to_address][email]=#{ @current_user.get_email }' \
+    -d 'shipment[from_address][name]=#{ @listing.author.full_name }' \
+    -d 'shipment[from_address][street1]=#{ author_canada_post_api_hsh[:street_address] }' \
+    -d 'shipment[from_address][street2]=#{ author_canada_post_api_hsh[:street_address] }' \
+    -d 'shipment[from_address][city]=#{ author_canada_post_api_hsh[:city] }' \
+    -d 'shipment[from_address][state]=#{ author_canada_post_api_hsh[:state] }' \
+    -d 'shipment[from_address][zip]=#{ author_canada_post_api_hsh[:zipcode] }' \
+    -d 'shipment[from_address][country]=#{ author_canada_post_api_hsh[:country] }' \
+    -d 'shipment[from_address][phone]=#{ @listing.author.phone_number }' \
+    -d 'shipment[from_address][email]=#{ @listing.author.email }' \
+    -d 'shipment[parcel][length]=#{ parcel_hsh[:length] }' \
+    -d 'shipment[parcel][width]=#{ parcel_hsh[:width] }' \
+    -d 'shipment[parcel][height]=#{ parcel_hsh[:height] }' \
+    -d 'shipment[parcel][weight]=#{ parcel_hsh[:width] }' \
+    -d 'shipment[customs_info][id]=cstinfo_...'`
+    puts @rates
+    puts "***********************************"
+    @rates = JSON.parse @rates.gsub('=>', ':')
+    @rates = @rates["rates"].sort_by! { |k| k["rate"]}
+  end
+
+  def prepare_hsh_for_canada_post
+    hsh = {  }
+    @current_user.custom_field_values.collect do |c_f_value|
+      key = c_f_value.question.name.parameterize.underscore
+      val = c_f_value.text_value
+      hsh.store(:"#{ key }", val)
+    end
+    hsh
+  end
+  def prepare_author_hsh_for_canada_post
+    hsh = {  }
+    listing.author.custom_field_values.collect do |c_f_value|
+      key = c_f_value.question.name.parameterize.underscore
+      val = c_f_value.text_value
+      hsh.store(:"#{ key }", val)
+    end
+    hsh
+  end
+  def listing
+    @listing ||= Listing.find_by(id: params[:listing_id])
+  end
+  def from_address_values
+    hsh = {  }
+    listing.custom_field_values.collect do |c_f_value|
+      key = c_f_value.question.name.parameterize.underscore
+      val = c_f_value.numeric_value
+      hsh.store(:"#{ key }", val)
+    end
+    hsh
   end
 end
