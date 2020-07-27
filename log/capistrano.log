@@ -6503,3 +6503,1176 @@ To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
 [0m
  DEBUG [1644b3d1] 	Command restart sent success
   INFO [1644b3d1] Finished in 1.842 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-07-27 19:36:51 +0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [74eb6cd2] Running [ -d ~/.rvm ] as ubuntu@54.148.174.247
+ DEBUG [74eb6cd2] Command: [ -d ~/.rvm ]
+ DEBUG [74eb6cd2] Finished in 3.808 seconds with exit status 0 (successful).
+ DEBUG [42cbd0ab] Running ~/.rvm/bin/rvm version as ubuntu@54.148.174.247
+ DEBUG [42cbd0ab] Command: ~/.rvm/bin/rvm version
+ DEBUG [42cbd0ab] 	rvm 1.29.10 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [42cbd0ab] Finished in 1.066 seconds with exit status 0 (successful).
+ DEBUG [f8de33f3] Running ~/.rvm/bin/rvm current as ubuntu@54.148.174.247
+ DEBUG [f8de33f3] Command: ~/.rvm/bin/rvm current
+ DEBUG [f8de33f3] 	ruby-2.6.5
+ DEBUG [f8de33f3] Finished in 1.097 seconds with exit status 0 (successful).
+ DEBUG [8a11d0af] Running ~/.rvm/bin/rvm default do ruby --version as ubuntu@54.148.174.247
+ DEBUG [8a11d0af] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [8a11d0af] 	ruby 2.6.5p114 (2019-10-01 revision 67812) [x86_64-linux]
+ DEBUG [8a11d0af] Finished in 1.175 seconds with exit status 0 (successful).
+  INFO [66aecd4d] Running /usr/bin/env mkdir -p /tmp as ubuntu@54.148.174.247
+ DEBUG [66aecd4d] Command: /usr/bin/env mkdir -p /tmp
+  INFO [66aecd4d] Finished in 0.618 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-quicker_books-production-alihassan.sh 0.0%
+  INFO Uploading /tmp/git-ssh-quicker_books-production-alihassan.sh 100.0%
+  INFO [d05d527f] Running /usr/bin/env chmod 700 /tmp/git-ssh-quicker_books-production-alihassan.sh as ubuntu@54.148.174.247
+ DEBUG [d05d527f] Command: /usr/bin/env chmod 700 /tmp/git-ssh-quicker_books-production-alihassan.sh
+  INFO [d05d527f] Finished in 0.889 seconds with exit status 0 (successful).
+  INFO [243f8019] Running /usr/bin/env git ls-remote git@github.com:ali-hassan/quicker_book.git HEAD as ubuntu@54.148.174.247
+ DEBUG [243f8019] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-quicker_books-production-alihassan.sh" ; /usr/bin/env git ls-remote git@github.com:ali-hassan/quicker_book.git HEAD )
+ DEBUG [243f8019] 	d2c1d89702a5c34f61d8ffbf3ca66fe3ec8895b7	HEAD
+  INFO [243f8019] Finished in 3.064 seconds with exit status 0 (successful).
+  INFO [1be992b4] Running /usr/bin/env mkdir -p /home/ubuntu/var/www/quicker_books/shared /home/ubuntu/var/www/quicker_books/releases as ubuntu@54.148.174.247
+ DEBUG [1be992b4] Command: /usr/bin/env mkdir -p /home/ubuntu/var/www/quicker_books/shared /home/ubuntu/var/www/quicker_books/releases
+  INFO [1be992b4] Finished in 1.164 seconds with exit status 0 (successful).
+  INFO [bb8bcb70] Running /usr/bin/env mkdir -p /home/ubuntu/var/www/quicker_books/shared/log /home/ubuntu/var/www/quicker_books/shared/tmp/pids /home/ubuntu/var/www/quicker_books/shared/tmp/cache /home/ubuntu/var/www/quicker_books/shared/tmp/sockets /home/ubuntu/var/www/quicker_books/shared/vendor/bundle /home/ubuntu/var/www/quicker_books/shared/public/system /home/ubuntu/var/www/quicker_books/shared/public/reports /home/ubuntu/var/www/quicker_books/shared/public/assets as ubuntu@54.148.174.247
+ DEBUG [bb8bcb70] Command: /usr/bin/env mkdir -p /home/ubuntu/var/www/quicker_books/shared/log /home/ubuntu/var/www/quicker_books/shared/tmp/pids /home/ubuntu/var/www/quicker_books/shared/tmp/cache /home/ubuntu/var/www/quicker_books/shared/tmp/sockets /home/ubuntu/var/www/quicker_books/shared/vendor/bundle /home/ubuntu/var/www/quicker_books/shared/public/system /home/ubuntu/var/www/quicker_books/shared/public/reports /home/ubuntu/var/www/quicker_books/shared/public/assets
+  INFO [bb8bcb70] Finished in 1.004 seconds with exit status 0 (successful).
+  INFO [ae66fffa] Running /usr/bin/env mkdir -p /home/ubuntu/var/www/quicker_books/shared/config as ubuntu@54.148.174.247
+ DEBUG [ae66fffa] Command: /usr/bin/env mkdir -p /home/ubuntu/var/www/quicker_books/shared/config
+  INFO [ae66fffa] Finished in 0.869 seconds with exit status 0 (successful).
+ DEBUG Uploading /home/ubuntu/var/www/quicker_books/shared/config/puma.rb 0.0%
+  INFO Uploading /home/ubuntu/var/www/quicker_books/shared/config/puma.rb 100.0%
+ DEBUG [7cc225b5] Running [ -f /home/ubuntu/var/www/quicker_books/shared/config/database.yml ] as ubuntu@54.148.174.247
+ DEBUG [7cc225b5] Command: [ -f /home/ubuntu/var/www/quicker_books/shared/config/database.yml ]
+ DEBUG [7cc225b5] Finished in 0.918 seconds with exit status 0 (successful).
+ DEBUG [4e41e5ad] Running [ -f /home/ubuntu/var/www/quicker_books/shared/config/secrets.yml ] as ubuntu@54.148.174.247
+ DEBUG [4e41e5ad] Command: [ -f /home/ubuntu/var/www/quicker_books/shared/config/secrets.yml ]
+ DEBUG [4e41e5ad] Finished in 1.024 seconds with exit status 0 (successful).
+ DEBUG [4aa7d3e4] Running [ -f /home/ubuntu/var/www/quicker_books/shared/config/puma.rb ] as ubuntu@54.148.174.247
+ DEBUG [4aa7d3e4] Command: [ -f /home/ubuntu/var/www/quicker_books/shared/config/puma.rb ]
+ DEBUG [4aa7d3e4] Finished in 0.913 seconds with exit status 0 (successful).
+ DEBUG [6a7d3b7f] Running [ -f /home/ubuntu/var/www/quicker_books/current/REVISION ] as ubuntu@54.148.174.247
+ DEBUG [6a7d3b7f] Command: [ -f /home/ubuntu/var/www/quicker_books/current/REVISION ]
+ DEBUG [6a7d3b7f] Finished in 0.926 seconds with exit status 0 (successful).
+ DEBUG [a4c02238] Running /usr/bin/env cat /home/ubuntu/var/www/quicker_books/current/REVISION 2>/dev/null as ubuntu@54.148.174.247
+ DEBUG [a4c02238] Command: /usr/bin/env cat /home/ubuntu/var/www/quicker_books/current/REVISION 2>/dev/null
+ DEBUG [a4c02238] 	021b2d0c65dc225891b607b52d70f9a8cf6ba0fc
+ DEBUG [a4c02238] Finished in 0.888 seconds with exit status 0 (successful).
+ DEBUG [40248968] Running [ -f /home/ubuntu/var/www/quicker_books/repo/HEAD ] as ubuntu@54.148.174.247
+ DEBUG [40248968] Command: [ -f /home/ubuntu/var/www/quicker_books/repo/HEAD ]
+ DEBUG [40248968] Finished in 0.957 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/ubuntu/var/www/quicker_books/repo
+ DEBUG [40fb337d] Running if test ! -d /home/ubuntu/var/www/quicker_books/repo; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/repo'" 1>&2; false; fi as ubuntu@54.148.174.247
+ DEBUG [40fb337d] Command: if test ! -d /home/ubuntu/var/www/quicker_books/repo; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/repo'" 1>&2; false; fi
+ DEBUG [40fb337d] Finished in 0.916 seconds with exit status 0 (successful).
+  INFO [ec9494d5] Running /usr/bin/env git remote set-url origin git@github.com:ali-hassan/quicker_book.git as ubuntu@54.148.174.247
+ DEBUG [ec9494d5] Command: cd /home/ubuntu/var/www/quicker_books/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-quicker_books-production-alihassan.sh" ; /usr/bin/env git remote set-url origin git@github.com:ali-hassan/quicker_book.git )
+  INFO [ec9494d5] Finished in 1.024 seconds with exit status 0 (successful).
+  INFO [673a2e04] Running /usr/bin/env git remote update --prune as ubuntu@54.148.174.247
+ DEBUG [673a2e04] Command: cd /home/ubuntu/var/www/quicker_books/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-quicker_books-production-alihassan.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [673a2e04] 	Fetching origin
+  INFO [673a2e04] Finished in 2.351 seconds with exit status 0 (successful).
+ DEBUG [f6358c9e] Running if test ! -d /home/ubuntu/var/www/quicker_books/repo; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/repo'" 1>&2; false; fi as ubuntu@54.148.174.247
+ DEBUG [f6358c9e] Command: if test ! -d /home/ubuntu/var/www/quicker_books/repo; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/repo'" 1>&2; false; fi
+ DEBUG [f6358c9e] Finished in 0.919 seconds with exit status 0 (successful).
+  INFO [a963be58] Running /usr/bin/env mkdir -p /home/ubuntu/var/www/quicker_books/releases/20200727143716 as ubuntu@54.148.174.247
+ DEBUG [a963be58] Command: cd /home/ubuntu/var/www/quicker_books/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-quicker_books-production-alihassan.sh" ; /usr/bin/env mkdir -p /home/ubuntu/var/www/quicker_books/releases/20200727143716 )
+  INFO [a963be58] Finished in 0.921 seconds with exit status 0 (successful).
+  INFO [43745de0] Running /usr/bin/env git archive staging | /usr/bin/env tar -x -f - -C /home/ubuntu/var/www/quicker_books/releases/20200727143716 as ubuntu@54.148.174.247
+ DEBUG [43745de0] Command: cd /home/ubuntu/var/www/quicker_books/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-quicker_books-production-alihassan.sh" ; /usr/bin/env git archive staging | /usr/bin/env tar -x -f - -C /home/ubuntu/var/www/quicker_books/releases/20200727143716 )
+  INFO [43745de0] Finished in 1.301 seconds with exit status 0 (successful).
+ DEBUG [488f6660] Running if test ! -d /home/ubuntu/var/www/quicker_books/repo; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/repo'" 1>&2; false; fi as ubuntu@54.148.174.247
+ DEBUG [488f6660] Command: if test ! -d /home/ubuntu/var/www/quicker_books/repo; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/repo'" 1>&2; false; fi
+ DEBUG [488f6660] Finished in 0.931 seconds with exit status 0 (successful).
+ DEBUG [3aa717ab] Running /usr/bin/env git rev-list --max-count=1 staging as ubuntu@54.148.174.247
+ DEBUG [3aa717ab] Command: cd /home/ubuntu/var/www/quicker_books/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-quicker_books-production-alihassan.sh" ; /usr/bin/env git rev-list --max-count=1 staging )
+ DEBUG [3aa717ab] 	021b2d0c65dc225891b607b52d70f9a8cf6ba0fc
+ DEBUG [3aa717ab] Finished in 1.026 seconds with exit status 0 (successful).
+ DEBUG [e8ae6705] Running if test ! -d /home/ubuntu/var/www/quicker_books/releases/20200727143716; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/releases/20200727143716'" 1>&2; false; fi as ubuntu@54.148.174.247
+ DEBUG [e8ae6705] Command: if test ! -d /home/ubuntu/var/www/quicker_books/releases/20200727143716; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/releases/20200727143716'" 1>&2; false; fi
+ DEBUG [e8ae6705] Finished in 0.939 seconds with exit status 0 (successful).
+  INFO [55c9a603] Running /usr/bin/env echo "021b2d0c65dc225891b607b52d70f9a8cf6ba0fc" > REVISION as ubuntu@54.148.174.247
+ DEBUG [55c9a603] Command: cd /home/ubuntu/var/www/quicker_books/releases/20200727143716 && /usr/bin/env echo "021b2d0c65dc225891b607b52d70f9a8cf6ba0fc" > REVISION
+  INFO [55c9a603] Finished in 0.984 seconds with exit status 0 (successful).
+  INFO [1a36464c] Running /usr/bin/env mkdir -p /home/ubuntu/var/www/quicker_books/releases/20200727143716/config as ubuntu@54.148.174.247
+ DEBUG [1a36464c] Command: /usr/bin/env mkdir -p /home/ubuntu/var/www/quicker_books/releases/20200727143716/config
+  INFO [1a36464c] Finished in 0.875 seconds with exit status 0 (successful).
+ DEBUG [c80a61ab] Running [ -L /home/ubuntu/var/www/quicker_books/releases/20200727143716/config/database.yml ] as ubuntu@54.148.174.247
+ DEBUG [c80a61ab] Command: [ -L /home/ubuntu/var/www/quicker_books/releases/20200727143716/config/database.yml ]
+ DEBUG [c80a61ab] Finished in 0.916 seconds with exit status 1 (failed).
+ DEBUG [9f2c7f3a] Running [ -f /home/ubuntu/var/www/quicker_books/releases/20200727143716/config/database.yml ] as ubuntu@54.148.174.247
+ DEBUG [9f2c7f3a] Command: [ -f /home/ubuntu/var/www/quicker_books/releases/20200727143716/config/database.yml ]
+ DEBUG [9f2c7f3a] Finished in 1.015 seconds with exit status 1 (failed).
+  INFO [faa382a8] Running /usr/bin/env ln -s /home/ubuntu/var/www/quicker_books/shared/config/database.yml /home/ubuntu/var/www/quicker_books/releases/20200727143716/config/database.yml as ubuntu@54.148.174.247
+ DEBUG [faa382a8] Command: /usr/bin/env ln -s /home/ubuntu/var/www/quicker_books/shared/config/database.yml /home/ubuntu/var/www/quicker_books/releases/20200727143716/config/database.yml
+  INFO [faa382a8] Finished in 1.010 seconds with exit status 0 (successful).
+ DEBUG [edf3f5f5] Running [ -L /home/ubuntu/var/www/quicker_books/releases/20200727143716/config/secrets.yml ] as ubuntu@54.148.174.247
+ DEBUG [edf3f5f5] Command: [ -L /home/ubuntu/var/www/quicker_books/releases/20200727143716/config/secrets.yml ]
+ DEBUG [edf3f5f5] Finished in 0.918 seconds with exit status 1 (failed).
+ DEBUG [76b70d0d] Running [ -f /home/ubuntu/var/www/quicker_books/releases/20200727143716/config/secrets.yml ] as ubuntu@54.148.174.247
+ DEBUG [76b70d0d] Command: [ -f /home/ubuntu/var/www/quicker_books/releases/20200727143716/config/secrets.yml ]
+ DEBUG [76b70d0d] Finished in 1.034 seconds with exit status 0 (successful).
+  INFO [0e6cbe89] Running /usr/bin/env rm /home/ubuntu/var/www/quicker_books/releases/20200727143716/config/secrets.yml as ubuntu@54.148.174.247
+ DEBUG [0e6cbe89] Command: /usr/bin/env rm /home/ubuntu/var/www/quicker_books/releases/20200727143716/config/secrets.yml
+  INFO [0e6cbe89] Finished in 0.913 seconds with exit status 0 (successful).
+  INFO [1280acc5] Running /usr/bin/env ln -s /home/ubuntu/var/www/quicker_books/shared/config/secrets.yml /home/ubuntu/var/www/quicker_books/releases/20200727143716/config/secrets.yml as ubuntu@54.148.174.247
+ DEBUG [1280acc5] Command: /usr/bin/env ln -s /home/ubuntu/var/www/quicker_books/shared/config/secrets.yml /home/ubuntu/var/www/quicker_books/releases/20200727143716/config/secrets.yml
+  INFO [1280acc5] Finished in 1.431 seconds with exit status 0 (successful).
+  INFO [63928bfa] Running /usr/bin/env mkdir -p /home/ubuntu/var/www/quicker_books/releases/20200727143716 /home/ubuntu/var/www/quicker_books/releases/20200727143716/tmp /home/ubuntu/var/www/quicker_books/releases/20200727143716/vendor /home/ubuntu/var/www/quicker_books/releases/20200727143716/public as ubuntu@54.148.174.247
+ DEBUG [63928bfa] Command: /usr/bin/env mkdir -p /home/ubuntu/var/www/quicker_books/releases/20200727143716 /home/ubuntu/var/www/quicker_books/releases/20200727143716/tmp /home/ubuntu/var/www/quicker_books/releases/20200727143716/vendor /home/ubuntu/var/www/quicker_books/releases/20200727143716/public
+  INFO [63928bfa] Finished in 1.127 seconds with exit status 0 (successful).
+ DEBUG [114a4121] Running [ -L /home/ubuntu/var/www/quicker_books/releases/20200727143716/log ] as ubuntu@54.148.174.247
+ DEBUG [114a4121] Command: [ -L /home/ubuntu/var/www/quicker_books/releases/20200727143716/log ]
+ DEBUG [114a4121] Finished in 1.018 seconds with exit status 1 (failed).
+ DEBUG [af20181f] Running [ -d /home/ubuntu/var/www/quicker_books/releases/20200727143716/log ] as ubuntu@54.148.174.247
+ DEBUG [af20181f] Command: [ -d /home/ubuntu/var/www/quicker_books/releases/20200727143716/log ]
+ DEBUG [af20181f] Finished in 1.007 seconds with exit status 0 (successful).
+  INFO [8205d51f] Running /usr/bin/env rm -rf /home/ubuntu/var/www/quicker_books/releases/20200727143716/log as ubuntu@54.148.174.247
+ DEBUG [8205d51f] Command: /usr/bin/env rm -rf /home/ubuntu/var/www/quicker_books/releases/20200727143716/log
+  INFO [8205d51f] Finished in 1.029 seconds with exit status 0 (successful).
+  INFO [a9a94ade] Running /usr/bin/env ln -s /home/ubuntu/var/www/quicker_books/shared/log /home/ubuntu/var/www/quicker_books/releases/20200727143716/log as ubuntu@54.148.174.247
+ DEBUG [a9a94ade] Command: /usr/bin/env ln -s /home/ubuntu/var/www/quicker_books/shared/log /home/ubuntu/var/www/quicker_books/releases/20200727143716/log
+  INFO [a9a94ade] Finished in 1.013 seconds with exit status 0 (successful).
+ DEBUG [2a11ca7c] Running [ -L /home/ubuntu/var/www/quicker_books/releases/20200727143716/tmp/pids ] as ubuntu@54.148.174.247
+ DEBUG [2a11ca7c] Command: [ -L /home/ubuntu/var/www/quicker_books/releases/20200727143716/tmp/pids ]
+ DEBUG [2a11ca7c] Finished in 0.994 seconds with exit status 1 (failed).
+ DEBUG [b2dc10f8] Running [ -d /home/ubuntu/var/www/quicker_books/releases/20200727143716/tmp/pids ] as ubuntu@54.148.174.247
+ DEBUG [b2dc10f8] Command: [ -d /home/ubuntu/var/www/quicker_books/releases/20200727143716/tmp/pids ]
+ DEBUG [b2dc10f8] Finished in 0.971 seconds with exit status 1 (failed).
+  INFO [cbef3f02] Running /usr/bin/env ln -s /home/ubuntu/var/www/quicker_books/shared/tmp/pids /home/ubuntu/var/www/quicker_books/releases/20200727143716/tmp/pids as ubuntu@54.148.174.247
+ DEBUG [cbef3f02] Command: /usr/bin/env ln -s /home/ubuntu/var/www/quicker_books/shared/tmp/pids /home/ubuntu/var/www/quicker_books/releases/20200727143716/tmp/pids
+  INFO [cbef3f02] Finished in 0.923 seconds with exit status 0 (successful).
+ DEBUG [7da6de50] Running [ -L /home/ubuntu/var/www/quicker_books/releases/20200727143716/tmp/cache ] as ubuntu@54.148.174.247
+ DEBUG [7da6de50] Command: [ -L /home/ubuntu/var/www/quicker_books/releases/20200727143716/tmp/cache ]
+ DEBUG [7da6de50] Finished in 0.870 seconds with exit status 1 (failed).
+ DEBUG [c9474a7d] Running [ -d /home/ubuntu/var/www/quicker_books/releases/20200727143716/tmp/cache ] as ubuntu@54.148.174.247
+ DEBUG [c9474a7d] Command: [ -d /home/ubuntu/var/www/quicker_books/releases/20200727143716/tmp/cache ]
+ DEBUG [c9474a7d] Finished in 0.962 seconds with exit status 1 (failed).
+  INFO [07c34779] Running /usr/bin/env ln -s /home/ubuntu/var/www/quicker_books/shared/tmp/cache /home/ubuntu/var/www/quicker_books/releases/20200727143716/tmp/cache as ubuntu@54.148.174.247
+ DEBUG [07c34779] Command: /usr/bin/env ln -s /home/ubuntu/var/www/quicker_books/shared/tmp/cache /home/ubuntu/var/www/quicker_books/releases/20200727143716/tmp/cache
+  INFO [07c34779] Finished in 1.008 seconds with exit status 0 (successful).
+ DEBUG [258f7d44] Running [ -L /home/ubuntu/var/www/quicker_books/releases/20200727143716/tmp/sockets ] as ubuntu@54.148.174.247
+ DEBUG [258f7d44] Command: [ -L /home/ubuntu/var/www/quicker_books/releases/20200727143716/tmp/sockets ]
+ DEBUG [258f7d44] Finished in 0.917 seconds with exit status 1 (failed).
+ DEBUG [0d5b0a49] Running [ -d /home/ubuntu/var/www/quicker_books/releases/20200727143716/tmp/sockets ] as ubuntu@54.148.174.247
+ DEBUG [0d5b0a49] Command: [ -d /home/ubuntu/var/www/quicker_books/releases/20200727143716/tmp/sockets ]
+ DEBUG [0d5b0a49] Finished in 0.923 seconds with exit status 1 (failed).
+  INFO [dcab035f] Running /usr/bin/env ln -s /home/ubuntu/var/www/quicker_books/shared/tmp/sockets /home/ubuntu/var/www/quicker_books/releases/20200727143716/tmp/sockets as ubuntu@54.148.174.247
+ DEBUG [dcab035f] Command: /usr/bin/env ln -s /home/ubuntu/var/www/quicker_books/shared/tmp/sockets /home/ubuntu/var/www/quicker_books/releases/20200727143716/tmp/sockets
+  INFO [dcab035f] Finished in 1.102 seconds with exit status 0 (successful).
+ DEBUG [d342d1a5] Running [ -L /home/ubuntu/var/www/quicker_books/releases/20200727143716/vendor/bundle ] as ubuntu@54.148.174.247
+ DEBUG [d342d1a5] Command: [ -L /home/ubuntu/var/www/quicker_books/releases/20200727143716/vendor/bundle ]
+ DEBUG [d342d1a5] Finished in 1.021 seconds with exit status 1 (failed).
+ DEBUG [92c1b9f4] Running [ -d /home/ubuntu/var/www/quicker_books/releases/20200727143716/vendor/bundle ] as ubuntu@54.148.174.247
+ DEBUG [92c1b9f4] Command: [ -d /home/ubuntu/var/www/quicker_books/releases/20200727143716/vendor/bundle ]
+ DEBUG [92c1b9f4] Finished in 0.916 seconds with exit status 1 (failed).
+  INFO [5e0996e5] Running /usr/bin/env ln -s /home/ubuntu/var/www/quicker_books/shared/vendor/bundle /home/ubuntu/var/www/quicker_books/releases/20200727143716/vendor/bundle as ubuntu@54.148.174.247
+ DEBUG [5e0996e5] Command: /usr/bin/env ln -s /home/ubuntu/var/www/quicker_books/shared/vendor/bundle /home/ubuntu/var/www/quicker_books/releases/20200727143716/vendor/bundle
+  INFO [5e0996e5] Finished in 0.914 seconds with exit status 0 (successful).
+ DEBUG [5b5ef1a7] Running [ -L /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/system ] as ubuntu@54.148.174.247
+ DEBUG [5b5ef1a7] Command: [ -L /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/system ]
+ DEBUG [5b5ef1a7] Finished in 0.985 seconds with exit status 1 (failed).
+ DEBUG [270efa6b] Running [ -d /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/system ] as ubuntu@54.148.174.247
+ DEBUG [270efa6b] Command: [ -d /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/system ]
+ DEBUG [270efa6b] Finished in 0.908 seconds with exit status 0 (successful).
+  INFO [6d7763aa] Running /usr/bin/env rm -rf /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/system as ubuntu@54.148.174.247
+ DEBUG [6d7763aa] Command: /usr/bin/env rm -rf /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/system
+  INFO [6d7763aa] Finished in 0.928 seconds with exit status 0 (successful).
+  INFO [6d6d6050] Running /usr/bin/env ln -s /home/ubuntu/var/www/quicker_books/shared/public/system /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/system as ubuntu@54.148.174.247
+ DEBUG [6d6d6050] Command: /usr/bin/env ln -s /home/ubuntu/var/www/quicker_books/shared/public/system /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/system
+  INFO [6d6d6050] Finished in 0.861 seconds with exit status 0 (successful).
+ DEBUG [059c5852] Running [ -L /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/reports ] as ubuntu@54.148.174.247
+ DEBUG [059c5852] Command: [ -L /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/reports ]
+ DEBUG [059c5852] Finished in 0.931 seconds with exit status 1 (failed).
+ DEBUG [3b5de49b] Running [ -d /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/reports ] as ubuntu@54.148.174.247
+ DEBUG [3b5de49b] Command: [ -d /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/reports ]
+ DEBUG [3b5de49b] Finished in 0.925 seconds with exit status 1 (failed).
+  INFO [f176b16b] Running /usr/bin/env ln -s /home/ubuntu/var/www/quicker_books/shared/public/reports /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/reports as ubuntu@54.148.174.247
+ DEBUG [f176b16b] Command: /usr/bin/env ln -s /home/ubuntu/var/www/quicker_books/shared/public/reports /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/reports
+  INFO [f176b16b] Finished in 0.922 seconds with exit status 0 (successful).
+ DEBUG [5e6b34bb] Running [ -L /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/assets ] as ubuntu@54.148.174.247
+ DEBUG [5e6b34bb] Command: [ -L /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/assets ]
+ DEBUG [5e6b34bb] Finished in 0.903 seconds with exit status 1 (failed).
+ DEBUG [6cd3a476] Running [ -d /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/assets ] as ubuntu@54.148.174.247
+ DEBUG [6cd3a476] Command: [ -d /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/assets ]
+ DEBUG [6cd3a476] Finished in 0.958 seconds with exit status 1 (failed).
+  INFO [77d4c056] Running /usr/bin/env ln -s /home/ubuntu/var/www/quicker_books/shared/public/assets /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/assets as ubuntu@54.148.174.247
+ DEBUG [77d4c056] Command: /usr/bin/env ln -s /home/ubuntu/var/www/quicker_books/shared/public/assets /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/assets
+  INFO [77d4c056] Finished in 0.952 seconds with exit status 0 (successful).
+ DEBUG [98cad1f2] Running if test ! -d /home/ubuntu/var/www/quicker_books/releases/20200727143716; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/releases/20200727143716'" 1>&2; false; fi as ubuntu@54.148.174.247
+ DEBUG [98cad1f2] Command: if test ! -d /home/ubuntu/var/www/quicker_books/releases/20200727143716; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/releases/20200727143716'" 1>&2; false; fi
+ DEBUG [98cad1f2] Finished in 0.934 seconds with exit status 0 (successful).
+ DEBUG [ab11de36] Running ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/var/www/quicker_books/shared/bundle as ubuntu@54.148.174.247
+ DEBUG [ab11de36] Command: cd /home/ubuntu/var/www/quicker_books/releases/20200727143716 && ~/.rvm/bin/rvm default do bundle check --path /home/ubuntu/var/www/quicker_books/shared/bundle
+ DEBUG [ab11de36] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/var/www/quicker_books/releases/20200727143716/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+ DEBUG [ab11de36] 	[31mhttps://github.com/ithouse/fake_stripe.git (at 56fe73d@56fe73d) is not yet
+checked out. Run `bundle install` first.[0m
+ DEBUG [ab11de36] Finished in 1.646 seconds with exit status 11 (failed).
+  INFO [ee66023f] Running ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/var/www/quicker_books/shared/bundle --jobs 4 --without development test --deployment --quiet as ubuntu@54.148.174.247
+ DEBUG [ee66023f] Command: cd /home/ubuntu/var/www/quicker_books/releases/20200727143716 && ~/.rvm/bin/rvm default do bundle install --path /home/ubuntu/var/www/quicker_books/shared/bundle --jobs 4 --without development test --deployment --quiet
+ DEBUG [ee66023f] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/var/www/quicker_books/releases/20200727143716/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+  INFO [ee66023f] Finished in 1.893 seconds with exit status 0 (successful).
+ DEBUG [d7387670] Running if test ! -d /home/ubuntu/var/www/quicker_books/releases/20200727143716; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/releases/20200727143716'" 1>&2; false; fi as ubuntu@54.148.174.247
+ DEBUG [d7387670] Command: if test ! -d /home/ubuntu/var/www/quicker_books/releases/20200727143716; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/releases/20200727143716'" 1>&2; false; fi
+ DEBUG [d7387670] Finished in 0.876 seconds with exit status 0 (successful).
+  INFO [d37b63e2] Running /usr/bin/env npm install --production --silent --no-progress as ubuntu@54.148.174.247
+ DEBUG [d37b63e2] Command: cd /home/ubuntu/var/www/quicker_books/releases/20200727143716 && /usr/bin/env npm install --production --silent --no-progress
+ DEBUG [d37b63e2] 	[?25l
+ DEBUG [d37b63e2] 	[[90m..................[0m] | rollbackFailedOptional: [34;40mverb[0m [35mnpm-session[0m e88607439112c34[0m[K
+ DEBUG [d37b63e2] 	[[7m [27m[90m.................[0m] / loadIdealTree:loadAllDepsIntoIdealTree: [7msill[0m [35minstall[0m loa[0m[K
+ DEBUG [d37b63e2] 	[[7m  [27m[90m................[0m] \ loadDep:whatwg-fetch: [7msill[0m [35minstall[0m loadAllDepsIntoIdealT[0m[K
+ DEBUG [d37b63e2] 	[[7m  [27m[90m................[0m] \ loadDep:to-regex: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTree[0m[K
+ DEBUG [d37b63e2] 	[[7m  [27m[90m................[0m] \ loadDep:set-value: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTree[0m[K
+ DEBUG [d37b63e2] 	[[7m  [27m[90m................[0m] \ loadDep:to-regex: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTree[0m[K
+ DEBUG [d37b63e2] 	[[7m  [27m[90m................[0m] \ loadDep:strip-json-comments: [7msill[0m [35minstall[0m loadAllDepsInt[0m[K
+ DEBUG [d37b63e2] 	[[7m  [27m[90m................[0m] \ loadDep:source-map: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTre[0m[K
+ DEBUG [d37b63e2] 	[[7m  [27m[90m................[0m] \ loadDep:@babel/plugin-syntax-throw-expressions: [7msill[0m [35mins[0m[K
+ DEBUG [d37b63e2] 	[[7m  [27m[90m................[0m] \ loadDep:regexpu-core: [7msill[0m [35minstall[0m loadAllDepsIntoIdealT[0m[K
+ DEBUG [d37b63e2] 	[[7m  [27m[90m................[0m] \ loadDep:regenerator-transform: [7msill[0m [35minstall[0m loadAllDepsI[0m[K
+ DEBUG [d37b63e2] 	[[7m   [27m[90m...............[0m] \ loadDep:is-symbol: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTree[0m[K
+ DEBUG [d37b63e2] 	[[7m   [27m[90m...............[0m] \ loadDep:ajv-keywords: [7msill[0m [35minstall[0m loadAllDepsIntoIdealT[0m[K
+ DEBUG [d37b63e2] 	[[7m   [27m[90m...............[0m] \ loadDep:randomfill: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTre[0m[K
+ DEBUG [d37b63e2] 	[[7m   [27m[90m...............[0m] \ loadDep:randombytes: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTr[0m[K
+ DEBUG [d37b63e2] 	[[7m   [27m[90m...............[0m] \ loadDep:spdx-expression-parse: [7msill[0m [35minstall[0m loadAllDepsI[0m[K
+ DEBUG [d37b63e2] 	[[7m   [27m[90m...............[0m] \ loadDep:uuid: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTree[0m[K
+ DEBUG [d37b63e2] 	[[7m   [27m[90m...............[0m] \ loadDep:postcss-selector-not: [7msill[0m [35minstall[0m loadAllDepsIn[0m[K
+ DEBUG [d37b63e2] 	[[7m   [27m[90m...............[0m] \ loadDep:rgb: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTree[0m[K
+ DEBUG [d37b63e2] 	[[7m   [27m[90m...............[0m] \ loadDep:postcss: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTree[0m[K
+ DEBUG [d37b63e2] 	[[7m   [27m[90m...............[0m] \ loadDep:micromatch: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTre[0m[K
+ DEBUG [d37b63e2] 	[[7m   [27m[90m...............[0m] \ loadDep:regenerator-runtime: [7msill[0m [35minstall[0m loadAllDepsInt[0m[K
+ DEBUG [d37b63e2] 	[[7m    [27m[90m..............[0m] \ loadDep:through2: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTree[0m[K
+ DEBUG [d37b63e2] 	[[7m    [27m[90m..............[0m] \ loadDep:@webassemblyjs/wast-parser: [7msill[0m [35minstall[0m loadAll[0m[K
+ DEBUG [d37b63e2] 	[[7m    [27m[90m..............[0m] \ loadDep:which: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTree[0m[K
+ DEBUG [d37b63e2] 	[[7m    [27m[90m..............[0m] \ loadDevDep:webpack-dev-server: [7msill[0m [35minstall[0m loadAllDepsI[0m[K
+ DEBUG [d37b63e2] 	[[7m    [27m[90m..............[0m] \ loadDep:webpack: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTree[0m[K
+ DEBUG [d37b63e2] 	[[7m    [27m[90m..............[0m] \ loadDep:react-treebeard: [7msill[0m [35minstall[0m loadAllDepsIntoIde[0m[K
+ DEBUG [d37b63e2] 	[[7m    [27m[90m..............[0m] \ loadDep:regexp.prototype.flags: [7msill[0m [35minstall[0m loadAllDeps[0m[K
+ DEBUG [d37b63e2] 	[[7m    [27m[90m..............[0m] \ loadDep:strip-ansi: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTre[0m[K
+ DEBUG [d37b63e2] 	[[7m    [27m[90m..............[0m] \ loadDep:vary: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTree[0m[K
+ DEBUG [d37b63e2] 	[[7m    [27m[90m..............[0m] \ loadDep:source-map: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTre[0m[K
+ DEBUG [d37b63e2] 	[[7m    [27m[90m..............[0m] \ loadDep:text-table: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTre[0m[K
+ DEBUG [d37b63e2] 	[[7m    [27m[90m..............[0m] \ loadDep:webpack-log: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTr[0m[K
+ DEBUG [d37b63e2] 	[[7m    [27m[90m..............[0m] \ loadDep:semver: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTree[0m[K
+ DEBUG [d37b63e2] 	[[7m    [27m[90m..............[0m] \ loadDep:space-separated-tokens: [7msill[0m [35minstall[0m loadAllDeps[0m[K
+ DEBUG [d37b63e2] 	[[7m    [27m[90m..............[0m] \ loadDep:minimist: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTree[0m[K
+ DEBUG [d37b63e2] 	[[7m    [27m[90m..............[0m] \ loadDep:@babel/plugin-transform-typescript: [7msill[0m [35minstall[0m[0m[K
+ DEBUG [d37b63e2] 	[[7m    [27m[90m..............[0m] \ loadDep:lodash.some: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTr[0m[K
+ DEBUG [d37b63e2] 	[[7m    [27m[90m..............[0m] \ loadDep:strip-ansi: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTre[0m[K
+ DEBUG [d37b63e2] 	[[7m     [27m[90m.............[0m] \ loadDep:esprima: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTree[0m[K
+ DEBUG [d37b63e2] 	[[7m     [27m[90m.............[0m] \ loadDep:which: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTree[0m[K
+ DEBUG [d37b63e2] 	[[7m     [27m[90m.............[0m] \ loadDep:slash: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTree[0m[K
+ DEBUG [d37b63e2] 	[[7m     [27m[90m.............[0m] \ loadDep:xtend: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTree[0m[K
+ DEBUG [d37b63e2] 	[[7m     [27m[90m.............[0m] \ loadDep:rimraf: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTree[0m[K
+ DEBUG [d37b63e2] 	[[7m     [27m[90m.............[0m] \ loadDep:mem: [7msill[0m [35minstall[0m loadAllDepsIntoIdealTree[0m[K
+ DEBUG [d37b63e2] 	[[7m       [27m[90m...........[0m] | diffTrees: [7msill[0m [35minstall[0m generateActionsToTake[0m[K
+ DEBUG [d37b63e2] 	[[7m       [27m[90m...........[0m] / diffTrees: [7msill[0m [35mdiff-trees[0m filtering actions: includeDev[0m[K
+ DEBUG [d37b63e2] 	[[7m       [27m[90m...........[0m] \ postinstall: [7msill[0m [35minstall[0m executeActions[0m[K
+ DEBUG [d37b63e2] 	[[7m       [27m[90m...........[0m] / extract:webpack-cli: [34;40mverb[0m [35mlock[0m using /home/ubuntu/.npm/_[0m[K
+ DEBUG [d37b63e2] 	[[7m       [27m[90m...........[0m] / extract:webpack-cli: [34;40mverb[0m [35mlock[0m using /home/ubuntu/.npm/_[0m[K
+ DEBUG [d37b63e2] 	[[7m       [27m[90m...........[0m] \ extract:webpack-cli: [34;40mverb[0m [35mlock[0m using /home/ubuntu/.npm/_[0m[K
+ DEBUG [d37b63e2] 	[[7m       [27m[90m...........[0m] \ extract:webpack-cli: [34;40mverb[0m [35mlock[0m using /home/ubuntu/.npm/_[0m[K
+ DEBUG [d37b63e2] 	[[7m       [27m[90m...........[0m] | extract:webpack-cli: [34;40mverb[0m [35mlock[0m using /home/ubuntu/.npm/_[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] | extract:@xtuc/ieee754: [7msill[0m [35mextract[0m @xtuc/ieee754@1.2.0[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] - extract:@webassemblyjs/ieee754: [7msill[0m [35mextract[0m @webassembl[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] - extract:@babel/plugin-syntax-async-generators: [7msill[0m [35mextr[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] / extract:@babel/helper-plugin-utils: [7msill[0m [35mextract[0m @babel/[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] - extract:debug: [7msill[0m [35mextract[0m debug@4.1.1 extracted to /ho[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] / extract:camelcase: [7msill[0m [35mextract[0m camelcase@3.0.0 extracte[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] \ extract:sass-loader: [7msill[0m [35mextract[0m sass-loader@7.1.0 extr[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] / extract:y18n: [7msill[0m [35mextract[0m y18n@3.2.1 extracted to /home[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] | extract:mississippi: [7msill[0m [35mextract[0m mississippi@3.0.0 extr[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] | extract:inflight: [7msill[0m [35mextract[0m inflight@1.0.6 extracted[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] | extract:end-of-stream: [7msill[0m [35mextract[0m end-of-stream@1.4.1[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] \ extract:wrappy: [7msill[0m [35mextract[0m wrappy@1.0.2 extracted to /[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] \ extract:findup-sync: [7msill[0m [35mextract[0m findup-sync@2.0.0 extr[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] | extract:global-prefix: [7msill[0m [35mextract[0m global-prefix@1.0.2[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] / extract:cross-spawn: [7msill[0m [35mextract[0m cross-spawn@6.0.5 extr[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] | extract:is-fullwidth-code-point: [7msill[0m [35mextract[0m is-fullwid[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] | extract:yargs-parser: [7msill[0m [35mextract[0m yargs-parser@11.1.1 e[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] | extract:loader-utils: [7msill[0m [35mextract[0m loader-utils@1.2.3 ex[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] \ extract:yargs: [7msill[0m [35mextract[0m yargs@7.1.0 extracted to /ho[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] / extract:concat-stream: [7msill[0m [35mextract[0m concat-stream@1.6.2[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] | extract:use: [7msill[0m [35mextract[0m use@3.1.1 extracted to /home/u[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] \ extract:punycode: [7msill[0m [35mextract[0m punycode@1.3.2 extracted[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] | extract:schema-utils: [7msill[0m [35mextract[0m schema-utils@1.0.0 ex[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] - extract:units-css: [7msill[0m [35mextract[0m units-css@0.4.0 extracte[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] \ extract:postcss-color-rebeccapurple: [7msill[0m [35mextract[0m postcs[0m[K
+ DEBUG [d37b63e2] 	[[7m        [27m[90m..........[0m] / extract:unicode-canonical-property-names-ecmascript: [7msil[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] / extract:source-map-resolve: [7msill[0m [35mextract[0m source-map-reso[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] | extract:enhanced-resolve: [7msill[0m [35mextract[0m enhanced-resolve@[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] - extract:typedarray: [7msill[0m [35mextract[0m typedarray@0.0.6 extrac[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] \ extract:@babel/plugin-transform-exponentiation-operator:[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] | extract:tslib: [7msill[0m [35mextract[0m tslib@1.9.3 extracted to /ho[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] - extract:kind-of: [7msill[0m [35mextract[0m kind-of@3.2.2 extracted to[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] \ extract:@babel/plugin-transform-react-jsx: [7msill[0m [35mextract[0m[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] / extract:timers-browserify: [7msill[0m [35mextract[0m timers-browserif[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] \ extract:@babel/preset-env: [7msill[0m [35mextract[0m @babel/preset-en[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] / extract:postcss-media-minmax: [7msill[0m [35mextract[0m postcss-media[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] | extract:postcss-nesting: [7msill[0m [35mextract[0m postcss-nesting@4.[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] / extract:uglify-js: [7msill[0m [35mextract[0m uglify-js@3.5.15 extract[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] - extract:postcss-color-rgba-fallback: [7msill[0m [35mextract[0m postcs[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] / extract:postcss-color-hex-alpha: [7msill[0m [35mextract[0m postcss-co[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] / extract:redux: [7msill[0m [35mextract[0m redux@3.7.2 extracted to /ho[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] / extract:pleeease-filters: [7msill[0m [35mextract[0m pleeease-filters@[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] \ extract:postcss-simple-vars: [7msill[0m [35mextract[0m postcss-simple[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] | extract:postcss-js: [7msill[0m [35mextract[0m postcss-js@2.0.1 extrac[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] - extract:postcss-modules-values: [7msill[0m [35mextract[0m postcss-mod[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] \ extract:@babel/code-frame: [7msill[0m [35mextract[0m @babel/code-fram[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] / extract:postcss: [7msill[0m [35mextract[0m postcss@6.0.23 extracted t[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] - extract:postcss: [7msill[0m [35mextract[0m postcss@6.0.23 extracted t[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] | extract:postcss: [7msill[0m [35mextract[0m postcss@6.0.23 extracted t[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] | extract:string-width: [7msill[0m [35mextract[0m string-width@1.0.2 ex[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] / extract:react-dates: [7msill[0m [35mextract[0m react-dates@4.1.0 extr[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] \ extract:postcss: [7msill[0m [35mextract[0m postcss@6.0.23 extracted t[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] - extract:postcss: [7msill[0m [35mextract[0m postcss@6.0.23 extracted t[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] - extract:color: [7msill[0m [35mextract[0m color@1.0.3 extracted to /ho[0m[K
+ DEBUG [d37b63e2] 	[[7m         [27m[90m.........[0m] | extract:clone-deep: [7msill[0m [35mextract[0m clone-deep@2.0.2 extrac[0m[K
+ DEBUG [d37b63e2] 	[[7m          [27m[90m........[0m] / extract:pify: [7msill[0m [35mextract[0m pify@3.0.0 extracted to /home[0m[K
+ DEBUG [d37b63e2] 	[[7m          [27m[90m........[0m] / extract:evp_bytestokey: [7msill[0m [35mextract[0m evp_bytestokey@1.0.[0m[K
+ DEBUG [d37b63e2] 	[[7m          [27m[90m........[0m] / extract:rgb-hex: [7msill[0m [35mextract[0m rgb-hex@2.1.0 extracted to[0m[K
+ DEBUG [d37b63e2] 	[[7m          [27m[90m........[0m] \ extract:import-cwd: [7msill[0m [35mextract[0m import-cwd@2.1.0 extrac[0m[K
+ DEBUG [d37b63e2] 	[[7m          [27m[90m........[0m] / extract:@babel/plugin-transform-named-capturing-groups-r[0m[K
+ DEBUG [d37b63e2] 	[[7m          [27m[90m........[0m] / extract:balanced-match: [7msill[0m [35mtarball[0m trying source-map@0[0m[K
+ DEBUG [d37b63e2] 	[[7m          [27m[90m........[0m] | extract:react-portal: [7msill[0m [35mextract[0m react-portal@3.2.0 ex[0m[K
+ DEBUG [d37b63e2] 	[[7m          [27m[90m........[0m] | extract:redux-thunk: [7msill[0m [35mextract[0m redux-thunk@2.3.0 extr[0m[K
+ DEBUG [d37b63e2] 	[[7m          [27m[90m........[0m] | extract:loader-utils: [7msill[0m [35mextract[0m loader-utils@1.2.3 ex[0m[K
+ DEBUG [d37b63e2] 	[[7m          [27m[90m........[0m] \ extract:supports-color: [7msill[0m [35mextract[0m postcss-message-hel[0m[K
+ DEBUG [d37b63e2] 	[[7m          [27m[90m........[0m] - extract:postcss-media-query-parser: [7msill[0m [35mextract[0m postcss[0m[K
+ DEBUG [d37b63e2] 	[[7m          [27m[90m........[0m] \ extract:loader-utils: [7msill[0m [35mextract[0m loader-utils@1.2.3 ex[0m[K
+ DEBUG [d37b63e2] 	[[7m          [27m[90m........[0m] | extract:psl: [7msill[0m [35mextract[0m psl@1.1.31 extracted to /home/[0m[K
+ DEBUG [d37b63e2] 	[[7m          [27m[90m........[0m] | extract:path-is-absolute: [7msill[0m [35mextract[0m path-is-absolute@[0m[K
+ DEBUG [d37b63e2] 	[[7m          [27m[90m........[0m] \ extract:path-browserify: [7msill[0m [35mextract[0m path-browserify@0.[0m[K
+ DEBUG [d37b63e2] 	[[7m          [27m[90m........[0m] | extract:source-map: [7msill[0m [35mextract[0m source-map@0.6.1 extrac[0m[K
+ DEBUG [d37b63e2] 	[[7m          [27m[90m........[0m] - extract:os-homedir: [7msill[0m [35mextract[0m os-homedir@1.0.2 extrac[0m[K
+ DEBUG [d37b63e2] 	[[7m          [27m[90m........[0m] - extract:kind-of: [7msill[0m [35mextract[0m kind-of@3.2.2 extracted to[0m[K
+ DEBUG [d37b63e2] 	[[7m           [27m[90m.......[0m] / extract:string_decoder: [7msill[0m [35mextract[0m string_decoder@0.10[0m[K
+ DEBUG [d37b63e2] 	[[7m           [27m[90m.......[0m] | extract:sort-keys: [7msill[0m [35mextract[0m sort-keys@2.0.0 extracte[0m[K
+ DEBUG [d37b63e2] 	[[7m           [27m[90m.......[0m] - extract:camelcase-keys: [7msill[0m [35mextract[0m camelcase-keys@2.1.[0m[K
+ DEBUG [d37b63e2] 	[[7m           [27m[90m.......[0m] / extract:lodash.templatesettings: [7msill[0m [35mextract[0m lodash.tem[0m[K
+ DEBUG [d37b63e2] 	[[7m           [27m[90m.......[0m] \ extract:asn1.js: [7msill[0m [35mextract[0m asn1.js@4.10.1 extracted t[0m[K
+ DEBUG [d37b63e2] 	[[7m           [27m[90m.......[0m] - extract:lodash._basecopy: [7msill[0m [35mextract[0m lodash._basecopy@[0m[K
+ DEBUG [d37b63e2] 	[[7m           [27m[90m.......[0m] - extract:just-omit: [7msill[0m [35mextract[0m just-omit@1.1.0 extracte[0m[K
+ DEBUG [d37b63e2] 	[[7m           [27m[90m.......[0m] \ extract:is-utf8: [7msill[0m [35mextract[0m is-utf8@0.2.1 extracted to[0m[K
+ DEBUG [d37b63e2] 	[[7m           [27m[90m.......[0m] | extract:extend-shallow: [7msill[0m [35mextract[0m extend-shallow@2.0.[0m[K
+ DEBUG [d37b63e2] 	[[7m           [27m[90m.......[0m] \ extract:invert-kv: [7msill[0m [35mextract[0m error-ex@1.3.2 extracted[0m[K
+ DEBUG [d37b63e2] 	[[7m           [27m[90m.......[0m] | extract:has-unicode: [7msill[0m [35mextract[0m has-unicode@2.0.1 extr[0m[K
+ DEBUG [d37b63e2] 	[[7m           [27m[90m.......[0m] | extract:globals: [7msill[0m [35mextract[0m globals@11.12.0 extracted[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ extract:esrecurse: [7msill[0m [35mextract[0m esrecurse@4.2.1 extracte[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - extract:delayed-stream: [7msill[0m [35mextract[0m delayed-stream@1.0.[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] / extract:currently-unhandled: [7msill[0m [35mextract[0m currently-unha[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ extract:brace-expansion: [7msill[0m [35mextract[0m brace-expansion@1.[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | extract:clone: [7msill[0m [35mextract[0m clone@1.0.4 extracted to /ho[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ extract:minimist: [7msill[0m [35mextract[0m minimist@1.2.0 extracted[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - extract:ansi-regex: [7msill[0m [35mextract[0m ansi-regex@2.1.1 extrac[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ extract:@webassemblyjs/leb128: [7msill[0m [35mextract[0m @webassembly[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - extract:ajv-keywords: [7msill[0m [35mextract[0m ajv-keywords@3.4.0 ex[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | extract:acorn: [7msill[0m [35mextract[0m acorn@6.1.1 extracted to /ho[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] / extract:regenerate-unicode-properties: [7msill[0m [35mextract[0m rege[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - extract:@babel/runtime-corejs2: [7msill[0m [35mextract[0m @babel/runt[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - extract:@babel/runtime-corejs2: [7msill[0m [35mextract[0m @babel/runt[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - extract:@babel/runtime-corejs2: [7msill[0m [35mextract[0m @babel/runt[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - extract:@babel/runtime-corejs2: [7msill[0m [35mextract[0m @babel/runt[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ extract:moment: [7msill[0m [35mextract[0m moment@2.22.1 extracted to[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ extract:moment: [7msill[0m [35mextract[0m moment@2.22.1 extracted to[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | extract:lodash-es: [7msill[0m [35mextract[0m lodash-es@4.17.11 extrac[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | extract:lodash-es: [7msill[0m [35mextract[0m lodash-es@4.17.11 extrac[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | extract:lodash-es: [7msill[0m [35mextract[0m lodash-es@4.17.11 extrac[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - extract:core-js: [7msill[0m [35mextract[0m core-js@1.2.7 extracted to[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | extract:lodash: [7msill[0m [35mextract[0m lodash@4.17.15 extracted to[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | extract:lodash: [7msill[0m [35mextract[0m lodash@4.17.15 extracted to[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | extract:lodash: [7msill[0m [35mextract[0m lodash@4.17.15 extracted to[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | finalize:webpack-cli: [7msill[0m [35mdoSerial[0m finalize 8444[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - finalize:async-foreach: [7msill[0m [35mfinalize[0m /home/ubuntu/var/w[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] / finalize:combined-stream: [7msill[0m [35mfinalize[0m /home/ubuntu/var[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ finalize:string-width: [7msill[0m [35mfinalize[0m /home/ubuntu/var/ww[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | finalize:extend-shallow: [7msill[0m [35mfinalize[0m /home/ubuntu/var/[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - finalize:lodash._getnative: [7msill[0m [35mfinalize[0m /home/ubuntu/v[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - finalize:debug: [7msill[0m [35mfinalize[0m /home/ubuntu/var/www/quick[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] / finalize:glob-parent: [7msill[0m [35mfinalize[0m /home/ubuntu/var/www[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ finalize:source-map: [7msill[0m [35mfinalize[0m /home/ubuntu/var/www/[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - finalize:ret: [7msill[0m [35mfinalize[0m /home/ubuntu/var/www/quicker[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ finalize:is-arrayish: [7msill[0m [35mfinalize[0m /home/ubuntu/var/www[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - finalize:postcss-modules-values: [7msill[0m [35mfinalize[0m /home/ubu[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | finalize:postcss: [7msill[0m [35mfinalize[0m /home/ubuntu/var/www/qui[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - finalize:@babel/helper-explode-assignable-expression: [7msi[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | finalize:schema-utils: [7msill[0m [35mfinalize[0m /home/ubuntu/var/ww[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | finalize:request: [7msill[0m [35mfinalize[0m /home/ubuntu/var/www/qui[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - finalize:os-locale: [7msill[0m [35mfinalize[0m /home/ubuntu/var/www/q[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - finalize:react-addons-css-transition-group: [7msill[0m [35mfinaliz[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ refresh-package-json:webpack-cli: [32;40mtiming[0m [35maction:finalize[0m[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ refresh-package-json:webpack-cli: [32;40mtiming[0m [35maction:finalize[0m[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ refresh-package-json:webpack-cli: [32;40mtiming[0m [35maction:finalize[0m[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] / refresh-package-json:debug: [7msill[0m [35mrefresh-package-json[0m /h[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] / refresh-package-json:debug: [7msill[0m [35mrefresh-package-json[0m /h[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | refresh-package-json:yargs: [7msill[0m [35mrefresh-package-json[0m /h[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - refresh-package-json:yargs: [7msill[0m [35mrefresh-package-json[0m /h[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - refresh-package-json:whatwg-fetch: [7msill[0m [35mrefresh-package-[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] / refresh-package-json:minimist: [7msill[0m [35mrefresh-package-json[0m[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - refresh-package-json:fast-glob: [7msill[0m [35mrefresh-package-jso[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | refresh-package-json:unique-filename: [7msill[0m [35mrefresh-packa[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | refresh-package-json:ajv: [7msill[0m [35mrefresh-package-json[0m /hom[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | refresh-package-json:typedarray: [7msill[0m [35mrefresh-package-js[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - refresh-package-json:@babel/template: [7msill[0m [35mrefresh-packa[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] / refresh-package-json:postcss-image-set-polyfill: [7msill[0m [35mre[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | refresh-package-json:autoprefixer: [7msill[0m [35mrefresh-package-[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ refresh-package-json:strip-indent: [7msill[0m [35mrefresh-package-[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - refresh-package-json:strip-bom: [7msill[0m [35mrefresh-package-jso[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ refresh-package-json:color: [7msill[0m [35mrefresh-package-json[0m /h[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | refresh-package-json:clone-deep: [7msill[0m [35mrefresh-package-js[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - refresh-package-json:minimist: [7msill[0m [35mrefresh-package-json[0m[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ refresh-package-json:rgb-hex: [7msill[0m [35mrefresh-package-json[0m[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - refresh-package-json:hoist-non-react-statics: [7msill[0m [35mrefre[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | refresh-package-json:reduce-css-calc: [7msill[0m [35mrefresh-packa[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - refresh-package-json:source-map: [7msill[0m [35mrefresh-package-js[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ refresh-package-json:parse-passwd: [7msill[0m [35mrefresh-package-[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] / refresh-package-json:p-finally: [7msill[0m [35mrefresh-package-jso[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] / refresh-package-json:punycode: [7msill[0m [35mrefresh-package-json[0m[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | refresh-package-json:mixin-deep: [7msill[0m [35mrefresh-package-js[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ refresh-package-json:loose-envify: [7msill[0m [35mrefresh-package-[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] / refresh-package-json:is-data-descriptor: [7msill[0m [35mrefresh-pa[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - refresh-package-json:js-base64: [7msill[0m [35mrefresh-package-jso[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ refresh-package-json:kind-of: [7msill[0m [35mrefresh-package-json[0m[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ refresh-package-json:source-map: [7msill[0m [35mrefresh-package-js[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ refresh-package-json:estraverse: [7msill[0m [35mrefresh-package-js[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | refresh-package-json:json5: [7msill[0m [35mrefresh-package-json[0m /h[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] / refresh-package-json:classnames: [7msill[0m [35mrefresh-package-js[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] / preinstall:webpack-cli: [32;40mtiming[0m [35maction:refresh-package-js[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] / preinstall:postcss: [32minfo[0m [35mlifecycle[0m strip-bom@2.0.0~prein[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] / preinstall:inherits: [32minfo[0m [35mlifecycle[0m estraverse@4.2.0~pre[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - build:abbrev: [7msill[0m [35mlinkStuff[0m abbrev@1.1.1 has /home/ubun[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - build:jsbn: [7msill[0m [35mlinkStuff[0m jsbn@0.1.1 has /home/ubuntu/v[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] / build:prr: [7msill[0m [35mlinkStuff[0m prr@1.0.1 has /home/ubuntu/var[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] / build:strip-eof: [7msill[0m [35mlinkStuff[0m strip-eof@1.0.0 has /hom[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] / build:util.promisify: [7msill[0m [35mlinkStuff[0m util.promisify@1.0.[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] | install:webpack-cli: [7msill[0m [35mdoSerial[0m install 8444[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - install:mkdirp: [32minfo[0m [35mlifecycle[0m mkdirp@0.5.1~install: mkd[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] - install:postcss: [32minfo[0m [35mlifecycle[0m postcss@6.0.23~install:[0m[K
+ DEBUG [d37b63e2] 	[K[?25h
+ DEBUG [d37b63e2] 	Cached binary found at /home/ubuntu/.npm/node-sass/4.12.0/linux-x64-64_binding.node
+ DEBUG [d37b63e2] 	[?25l
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ postinstall:array-union: [32minfo[0m [35mlifecycle[0m array-union@1.0.[0m[K
+ DEBUG [d37b63e2] 	[K[?25h
+ DEBUG [d37b63e2] 	[?25l
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ postinstall:posix-character-classes: [32minfo[0m [35mlifecycle[0m posi[0m[K
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ postinstall:tough-cookie: [32minfo[0m [35mlifecycle[0m tough-cookie@2.[0m[K
+ DEBUG [d37b63e2] 	[K[?25h
+ DEBUG [d37b63e2] 	Binary found at /home/ubuntu/var/www/quicker_books/releases/20200727143716/client/node_modules/node-sass/vendor/linux-x64-64/binding.node
+ DEBUG [d37b63e2] 	Testing binary
+ DEBUG [d37b63e2] 	Binary is fine
+ DEBUG [d37b63e2] 	[?25l
+ DEBUG [d37b63e2] 	[[7m            [27m[90m......[0m] \ postinstall: [32minfo[0m [35mlifecycle[0m webpack-cli@3.3.0~postinstal[0m[K
+ DEBUG [d37b63e2] 	[[7m             [27m[90m.....[0m] \ postinstall:client: [32minfo[0m [35mlifecycle[0m undefined~postinstall[0m[K
+ DEBUG [d37b63e2] 	[[7m             [27m[90m.....[0m] \ postinstall:client: [32minfo[0m [35mlifecycle[0m undefined~postinstall[0m[K
+ DEBUG [d37b63e2] 	[[7m             [27m[90m.....[0m] \ postinstall:client: [32minfo[0m [35mlifecycle[0m undefined~postinstall[0m[K
+ DEBUG [d37b63e2] 	[K[?25h
+ DEBUG [d37b63e2] 	added 1005 packages from 670 contributors and audited 2048 packages in 19.118s
+ DEBUG [d37b63e2] 	found [91m1848[0m vulnerabilities (1838 [1mlow[0m, 9 [93mmoderate[0m, 1 [91mhigh[0m)
+  run `npm audit fix` to fix them, or `npm audit` for details
+ DEBUG [d37b63e2] 	up to date in 19.808s
+ DEBUG [d37b63e2] 	found [92m0[0m vulnerabilities
+
+  INFO [d37b63e2] Finished in 21.161 seconds with exit status 0 (successful).
+ DEBUG [e39dd913] Running if test ! -d /home/ubuntu/var/www/quicker_books/releases/20200727143716; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/releases/20200727143716'" 1>&2; false; fi as ubuntu@54.148.174.247
+ DEBUG [e39dd913] Command: if test ! -d /home/ubuntu/var/www/quicker_books/releases/20200727143716; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/releases/20200727143716'" 1>&2; false; fi
+ DEBUG [e39dd913] Finished in 0.967 seconds with exit status 0 (successful).
+  INFO [6cd68b77] Running ~/.rvm/bin/rvm default do bundle exec rake assets:precompile as ubuntu@54.148.174.247
+ DEBUG [6cd68b77] Command: cd /home/ubuntu/var/www/quicker_books/releases/20200727143716 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; ~/.rvm/bin/rvm default do bundle exec rake assets:precompile )
+ DEBUG [6cd68b77] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/var/www/quicker_books/releases/20200727143716/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+ DEBUG [6cd68b77] 	cd client && npm run build:client
+ DEBUG [6cd68b77] 	
+> @ build:client /home/ubuntu/var/www/quicker_books/releases/20200727143716/client
+> npm run ensure-node-version && webpack --mode=production --config webpack.client.config.js
+
+ DEBUG [6cd68b77] 	
+> @ ensure-node-version /home/ubuntu/var/www/quicker_books/releases/20200727143716/client
+> check-node-version --package
+
+ DEBUG [6cd68b77] 	Webpack dev build for Rails
+ DEBUG [6cd68b77] 	Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+ DEBUG [6cd68b77] 	[BABEL] Note: The code generator has deoptimised the styling of /home/ubuntu/var/www/quicker_books/releases/20200727143716/client/app/i18n/all.js as it exceeds the max of 500KB.
+ DEBUG [6cd68b77] 	Hash: [1m73b8571dff12fe7f5606[39m[22m
+Version: webpack [1m4.30.0[39m[22m
+Time: [1m18742[39m[22mms
+Built at: 07/27/2020 [1m2:38:57 PM[39m[22m
+                                                          [1mAsset[39m[22m       [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m           [1m[39m[22m       [1mChunk Names[39m[22m
+                                                 [1m[32mapp-bundle.css[39m[22m   82.6 KiB       [1m0[39m[22m  [1m[32m[emitted][39m[22m         app
+                                                  [1m[33mapp-bundle.js[39m[22m   [1m[33m3.11 MiB[39m[22m       [1m0[39m[22m  [1m[32m[emitted][39m[22m  [1m[33m[big][39m[22m  app
+             [1m[32miconSquare@2x-bf15c9d930ef46b36623f32f09750b41.png[39m[22m  175 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+      [1m[32miconSquareChecked@2x-b460297a03434c915aedab4c95233c9d.png[39m[22m  472 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+   [1m[32mstep2_sloganDescription-b19a5e558e3d56b5334dcfe55e3c036c.jpg[39m[22m   80.8 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+          [1m[32mstep3_coverPhoto-785cdefbdbdbc78f2cb3e59743e9298b.jpg[39m[22m   70.7 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+       [1m[32mstep4_fieldsFilters-4203c725b71275066cab9884795775f0.jpg[39m[22m   76.4 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+[1m[32mstep5_screenshot_paypal@2x-e270d0bedc9a7786f6d22208a8e7efc2.png[39m[22m   2.48 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+          [1m[32mstep6_addListing-95c1db46186bcf7e7e93366347b92103.jpg[39m[22m    111 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+ [1m[32mstep7_screenshot_share@2x-04dd5ab19e53d37a1ba1a2a6f765c719.png[39m[22m   8.71 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                                               [1m[33mvendor-bundle.js[39m[22m   [1m[33m8.06 MiB[39m[22m       [1m1[39m[22m  [1m[32m[emitted][39m[22m  [1m[33m[big][39m[22m  vendor
+Entrypoint [1mapp[39m[22m [1m[33m[big][39m[22m = [1m[32mvendor-bundle.js[39m[22m [1m[32mapp-bundle.css[39m[22m [1m[32mapp-bundle.js[39m[22m
+  [2] [1m./app/utils/i18n.js[39m[22m 4.45 KiB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+  [9] [1m./app/assets/styles/variables.js[39m[22m 14.5 KiB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+ [14] [1m./node_modules/redux/es/index.js + 6 modules[39m[22m 20.4 KiB {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+      |    7 modules
+ [28] [1m(webpack)/buildin/global.js[39m[22m 472 bytes {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+ [52] [1m./node_modules/lodash-es/isPlainObject.js + 8 modules[39m[22m 5.58 KiB {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+      |    9 modules
+[155] [1m(webpack)/buildin/module.js[39m[22m 497 bytes {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+[206] [1m./node_modules/react-form/node_modules/redux/es/index.js + 6 modules[39m[22m 20.6 KiB {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+      |    7 modules
+[276] [1m./node_modules/numbro/languages sync ^\.\/.*$[39m[22m 1.19 KiB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+[451] [1m./app/assets/json/currency_iso.json[39m[22m 17.9 KiB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+[467] [1mmulti ./app/startup/clientRegistration[39m[22m 28 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+[588] [1m./app/i18n/all.js[39m[22m 489 KiB {[1m[33m0[39m[22m}[1m[33m [optional][39m[22m[1m[32m [built][39m[22m
+[590] [1m./app/routes/routes.js[39m[22m 225 KiB {[1m[33m0[39m[22m}[1m[33m [optional][39m[22m[1m[32m [built][39m[22m
+[612] [1m./node_modules/moment/locale sync ^\.\/.*$[39m[22m 2.91 KiB {[1m[33m0[39m[22m}[1m[33m [optional][39m[22m[1m[32m [built][39m[22m
+[709] [1m./app/startup/clientRegistration.js + 111 modules[39m[22m 341 KiB {[1m[33m0[39m[2
+ DEBUG [6cd68b77] 	2m}[1m[32m [built][39m[22m
+      | [1m./app/startup/clientRegistration.js[39m[22m 805 bytes[1m[32m [built][39m[22m
+      | [1m./app/startup/OnboardingTopBarApp.js[39m[22m 893 bytes[1m[32m [built][39m[22m
+      | [1m./app/startup/OnboardingGuideApp.js[39m[22m 1.48 KiB[1m[32m [built][39m[22m
+      | [1m./app/startup/TopbarApp.js[39m[22m 971 bytes[1m[32m [built][39m[22m
+      | [1m./app/startup/SearchPageApp.js[39m[22m 5.61 KiB[1m[32m [built][39m[22m
+      | [1m./app/startup/ManageAvailabilityApp.js[39m[22m 1.83 KiB[1m[32m [built][39m[22m
+      | [1m./app/startup/ListingWorkingHoursApp.js[39m[22m 2.14 KiB[1m[32m [built][39m[22m
+      | [1m./app/utils/routes.js[39m[22m 3.82 KiB[1m[32m [built][39m[22m
+      | [1m./app/models/FlashNotificationModel.js[39m[22m 190 bytes[1m[32m [built][39m[22m
+      | [1m./app/models/ImageModel.js[39m[22m 1.17 KiB[1m[32m [built][39m[22m
+      | [1m./app/models/ProfileModel.js[39m[22m 1.01 KiB[1m[32m [built][39m[22m
+      | [1m./app/models/ListingModel.js[39m[22m 1.53 KiB[1m[32m [built][39m[22m
+      | [1m./app/reducers/reducersIndex.js[39m[22m 1.64 KiB[1m[32m [built][39m[22m
+      | [1m./app/utils/transitImmutableConverter.js[39m[22m 4.23 KiB[1m[32m [built][39m[22m
+      | [1m./app/actions/ManageAvailabilityActions.js[39m[22m 7.25 KiB[1m[32m [built][39m[22m
+      |     + 97 hidden modules
+[711] [1mmulti es6-shim whatwg-fetch[39m[22m 40 bytes {[1m[33m1[39m[22m}[1m[32m [built][39m[22m
+    + 728 hidden modules
+
+[1m[33mWARNING in ./app/actions/ManageAvailabilityActions.js 43:10-33
+"export 'DATA_LOADED' (imported as 'actionTypes') was not found in '../constants/ManageAvailabilityConstants'
+ @ ./app/startup/ManageAvailabilityApp.js
+ @ ./app/startup/clientRegistration.js
+ @ multi ./app/startup/clientRegistration[39m[22m
+
+[1m[33mWARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  app-bundle.js (3.11 MiB)
+  vendor-bundle.js (8.06 MiB)[39m[22m
+
+[1m[33mWARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (11.2 MiB)
+      vendor-bundle.js
+      app-bundle.css
+      app-bundle.js
+[39m[22m
+
+[1m[33mWARNING in webpack performance recommendations: 
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/[39m[22m
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/AvatarDropdown/AvatarDropdown.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/AvatarDropdown/ProfileDropdown.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/Branding/Branding.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/FlashNotification/FlashNotification.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/ListingCard/ListingCard.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+      
+ DEBUG [6cd68b77] 	 2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/ListingCardPanel/ListingCardPanel.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/LoginLinks/LoginLinks.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/ManageAvailabilityCalendar/ManageAvailabilityCalendar.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/ManageAvailabilityHeader/ManageAvailabilityHeader.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/Menu/Menu.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/MenuMobile/MenuMobile.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/MenuPriority/MenuPriority.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/NoResults/NoResults.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/PageSelection/PageSelection.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/Portal/Portal.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/SearchBar/SearchBar.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/SideWinder/SideWinder.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/elements/AddNewListingButton/AddNewListingButton.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/elements/Avatar/Avatar.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcs
+ DEBUG [6cd68b77] 	s-loader/src/index.js!app/components/elements/Link/Link.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/elements/Logo/Logo.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/elements/MenuItem/MenuItem.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/elements/NotificationBadge/NotificationBadge.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/elements/RoundButton/RoundButton.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/sections/ListingWorkingHours/ListingWorkingHours.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/sections/ListingWorkingHours/form.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/sections/ManageAvailability/ManageAvailability.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/sections/OnboardingGuide/OnboardingGuide.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       5 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/sections/OnboardingTopBar/OnboardingTopBar.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/sections/SearchPage/SearchPage.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/sections/Topbar/Topbar.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+ DEBUG [6cd68b77] 	cd client && npm run build:server
+ DEBUG [6cd68b77] 	
+> @ build:server /home/ubuntu/var/www/quicker_books/releases/20200727143716/client
+> npm run ensure-node-version && webpack --mode=production --config webpack.server.config.js
+
+ DEBUG [6cd68b77] 	
+> @ ensure-node-version /home/ubuntu/var/www/quicker_books/releases/20200727143716/client
+> check-node-version --package
+
+ DEBUG [6cd68b77] 	Browserslist: caniuse-lite is outdated. Please run next command `npm update`
+ DEBUG [6cd68b77] 	Hash: [1mf3209e4e3f557300d46b[39m[22m
+Version: webpack [1m4.30.0[39m[22m
+Time: [1m15942[39m[22mms
+Built at: 07/27/2020 [1m2:39:14 PM[39m[22m
+                                                          [1mAsset[39m[22m       [1mSize[39m[22m  [1mChunks[39m[22m  [1m[39m[22m           [1m[39m[22m       [1mChunk Names[39m[22m
+             [1m[32miconSquare@2x-bf15c9d930ef46b36623f32f09750b41.png[39m[22m  175 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+      [1m[32miconSquareChecked@2x-b460297a03434c915aedab4c95233c9d.png[39m[22m  472 bytes        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+                                              [1m[32mserver-bundle.css[39m[22m   68.3 KiB       [1m0[39m[22m  [1m[32m[emitted][39m[22m         main
+                                               [1m[33mserver-bundle.js[39m[22m   [1m[33m1.84 MiB[39m[22m       [1m0[39m[22m  [1m[32m[emitted][39m[22m  [1m[33m[big][39m[22m  main
+   [1m[32mstep2_sloganDescription-b19a5e558e3d56b5334dcfe55e3c036c.jpg[39m[22m   80.8 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+          [1m[32mstep3_coverPhoto-785cdefbdbdbc78f2cb3e59743e9298b.jpg[39m[22m   70.7 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+       [1m[32mstep4_fieldsFilters-4203c725b71275066cab9884795775f0.jpg[39m[22m   76.4 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+[1m[32mstep5_screenshot_paypal@2x-e270d0bedc9a7786f6d22208a8e7efc2.png[39m[22m   2.48 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+          [1m[32mstep6_addListing-95c1db46186bcf7e7e93366347b92103.jpg[39m[22m    111 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+ [1m[32mstep7_screenshot_share@2x-04dd5ab19e53d37a1ba1a2a6f765c719.png[39m[22m   8.71 KiB        [1m[39m[22m  [1m[32m[emitted][39m[22m         
+Entrypoint [1mmain[39m[22m [1m[33m[big][39m[22m = [1m[32mserver-bundle.css[39m[22m [1m[32mserver-bundle.js[39m[22m
+  [3] [1m./app/utils/i18n.js[39m[22m 4.45 KiB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+ [19] [1m./app/assets/styles/variables.js[39m[22m 14.5 KiB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+ [38] [1m./node_modules/redux/es/index.js + 15 modules[39m[22m 25.9 KiB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+      |    16 modules
+ [46] [1m(webpack)/buildin/global.js[39m[22m 472 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+[366] [1m(webpack)/buildin/module.js[39m[22m 497 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+[367] [1m./node_modules/numbro/languages sync ^\.\/.*$[39m[22m 1.19 KiB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+[527] [1m./app/assets/json/currency_iso.json[39m[22m 17.9 KiB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+[535] [1mmulti @babel/polyfill ./app/startup/serverRegistration[39m[22m 40 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+[852] [1m(webpack)/buildin/harmony-module.js[39m[22m 573 bytes {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+[868] [1m./app/i18n/all.js[39m[22m 492 KiB {[1m[33m0[39m[22m}[1m[33m [optional][39m[22m[1m[32m [built][39m[22m
+[870] [1m./app/routes/routes.js[39m[22m 225 KiB {[1m[33m0[39m[22m}[1m[33m [optional][39m[22m[1m[32m [built][39m[22m
+[882] [1m./node_modules/moment/locale sync ^\.\/.*$[39m[22m 2.91 KiB {[1m[33m0[39m[22m}[1m[33m [optional][39m[22m[1m[32m [built][39m[22m
+[916] [1m./app/startup/serverRegistration.js + 90 modules[39m[22m 254 KiB {[1m[33m0[39m[22m}[1m[32m [built][39m[22m
+      | [1m./app/startup/serverRegistration.js[39m[22m 516 bytes[1m[32m [built][39m[22m
+      | [1m./app/startup/OnboardingGuideApp.js[39m[22m 1.48 KiB[1m[32m [built][39m[22m
+      | [1m./app/startup/OnboardingTopBarApp.js[39m[22m 893 bytes[1m[32m [built][39m[22m
+      | [1m./app/startup/TopbarApp.js[39m[22m 971 bytes[1m[32m [built][39m[22m
+      | [1m.
+ DEBUG [6cd68b77] 	/app/startup/SearchPageApp.js[39m[22m 5.61 KiB[1m[32m [built][39m[22m
+      | [1m./app/utils/routes.js[39m[22m 3.82 KiB[1m[32m [built][39m[22m
+      | [1m./app/models/FlashNotificationModel.js[39m[22m 190 bytes[1m[32m [built][39m[22m
+      | [1m./app/models/ImageModel.js[39m[22m 1.17 KiB[1m[32m [built][39m[22m
+      | [1m./app/models/ProfileModel.js[39m[22m 1.01 KiB[1m[32m [built][39m[22m
+      | [1m./app/models/ListingModel.js[39m[22m 1.53 KiB[1m[32m [built][39m[22m
+      | [1m./app/reducers/reducersIndex.js[39m[22m 1.64 KiB[1m[32m [built][39m[22m
+      | [1m./app/utils/transitImmutableConverter.js[39m[22m 4.23 KiB[1m[32m [built][39m[22m
+      | [1m./app/reducers/OnboardingGuideReducer.js[39m[22m 760 bytes[1m[32m [built][39m[22m
+      | [1m./app/reducers/FlashNotificationReducer.js[39m[22m 1.17 KiB[1m[32m [built][39m[22m
+      | [1m./app/utils/PropTypes.js[39m[22m 822 bytes[1m[32m [built][39m[22m
+      |     + 76 hidden modules
+    + 928 hidden modules
+
+[1m[33mWARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  server-bundle.js (1.84 MiB)[39m[22m
+
+[1m[33mWARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  main (1.91 MiB)
+      server-bundle.css
+      server-bundle.js
+[39m[22m
+
+[1m[33mWARNING in webpack performance recommendations: 
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/[39m[22m
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/AvatarDropdown/AvatarDropdown.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/AvatarDropdown/ProfileDropdown.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/Branding/Branding.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/FlashNotification/FlashNotification.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/ListingCard/ListingCard.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/ListingCardPanel/ListingCardPanel.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/LoginLinks/LoginLinks.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/Menu/Menu.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loa
+ DEBUG [6cd68b77] 	der/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/MenuMobile/MenuMobile.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/MenuPriority/MenuPriority.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/NoResults/NoResults.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/PageSelection/PageSelection.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/composites/SearchBar/SearchBar.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/elements/AddNewListingButton/AddNewListingButton.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/elements/Avatar/Avatar.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/elements/Link/Link.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/elements/Logo/Logo.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/elements/MenuItem/MenuItem.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/elements/NotificationBadge/NotificationBadge.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/elements/RoundButton/RoundButton.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/sections/OnboardingGuide/OnboardingGuide.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       5 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/sections/OnboardingTopBar/OnboardingTopBar.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/sections/SearchPage/SearchPage.css[39m[22m:
+    Entrypoint [1mmini-css-extract-pl
+ DEBUG [6cd68b77] 	ugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+Child [1mmini-css-extract-plugin node_modules/css-loader/dist/cjs.js??ref--5-1!node_modules/postcss-loader/src/index.js!app/components/sections/Topbar/Topbar.css[39m[22m:
+    Entrypoint [1mmini-css-extract-plugin[39m[22m = [1m[32m*[39m[22m
+       2 modules
+ DEBUG [6cd68b77] 	Yarn executable was not detected in the system.
+Download Yarn at https://yarnpkg.com/en/docs/install
+ DEBUG [6cd68b77] 	React On Rails: Digested version of map_icons/m1.png already exists indicating map_icons/m1-5118720be739d6eaaa6c5e9dfce3c6ba3f15838ba5aa5dfec6687bc24bc4413e.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of fontawesome-webfont.eot already exists indicating fontawesome-webfont-e07d3b0225ad8e9438927341d63485e01c767edf1e2930b16f0a0bf907ae0d82.eot did not change.
+React On Rails: Digested version of fontawesome-webfont.eot.gz already exists indicating fontawesome-webfont-e07d3b0225ad8e9438927341d63485e01c767edf1e2930b16f0a0bf907ae0d82.eot.gz did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of fontawesome-webfont.woff already exists indicating fontawesome-webfont-a6fb906942932de53852ee244ee3fec27bca0bf63a96421672aa4784851b8d4b.woff did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of fontawesome-webfont.ttf already exists indicating fontawesome-webfont-1eb7466293db9378858da3694dd11620ec9c351fb7cefef1a94a3802803e1fa3.ttf did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of fontawesome-webfont.ttf.gz already exists indicating fontawesome-webfont-1eb7466293db9378858da3694dd11620ec9c351fb7cefef1a94a3802803e1fa3.ttf.gz did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of cover_photos/header/default.jpg already exists indicating cover_photos/header/default-7f90b47ba0369f4d8a979491ad6478da4f409e13f1e077aae3c4908d9f021627.jpg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of svg/arrow-down.svg already exists indicating svg/arrow-down-22ceea13566a6e18bd4ccf65ba1d846eaed5aa96409e4154811f254ae09fb303.svg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of svg/arrow-down.svg.gz already exists indicating svg/arrow-down-22ceea13566a6e18bd4ccf65ba1d846eaed5aa96409e4154811f254ae09fb303.svg.gz did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of svg/arrow-down-hover.svg already exists indicating svg/arrow-down-hover-5a3f71b3a987b4522e984f309ddb760e0e7152f1eeb024010108aa29c1750406.svg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of svg/arrow-down-hover.svg.gz already exists indicating svg/arrow-down-hover-5a3f71b3a987b4522e984f309ddb760e0e7152f1eeb024010108aa29c1750406.svg.gz did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of svg/search.svg already exists indicating svg/search-4e0efea75360c5db9f133c758604c1d6a798996309c6a5097b45e5555d302c84.svg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of svg/search.svg.gz already exists indicating svg/search-4e0efea75360c5db9f133c758604c1d6a798996309c6a5097b45e5555d302c84.svg.gz did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of svg/search-active.svg already exists indicating svg/search-active-3cd3552edc1d933fdeee4dd78cf207a28b6c91bc8636d5f7d0b779d87ee27b5f.svg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of svg/search-active.svg.gz already exists indicating svg/search-active-3cd3552edc1d933fdeee4dd78cf207a28b6c91bc8636d5f7d0b779d87ee27b5f.svg.gz did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of svg/select-background.svg already exists indicating svg/select-background-ce7baffbc8a89138e74565dc4ad3cb29f02017ec2a68eac53cec02b9f51e4dd0.svg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of svg/select-background.svg.gz already exists indicating svg/select-background-ce7baffbc8a89138e74565dc4ad3cb29f02017ec2a68eac53cec02b9f51e4dd0.svg.gz did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of svg/checkmark.svg already exists indicating svg/checkmark-cd971a3889233a8721165430ec33dbc411d38f7715baf9ebfb1f503fb23f799a.svg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of svg/checkmark.svg.gz already exists indicating svg/checkmark-cd971a3889233a8721165430ec33dbc411d38f7715baf9ebfb1f503fb23f799a.svg.gz did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of svg/radio.svg already exists indicating svg/radio-56469acf5cc7d5547a82ed957c32b953cf8370413237a85939d8f06d03bf0d50.svg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of svg/radio.svg.gz already exists indicating svg/radio-56469acf5cc7d5547a82ed957c32b953cf8370413237a85939d8f06d03bf0d50.svg.gz did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of svg/arrow-down-big.svg already exists indicating svg/arrow-down-big-7059fd0780272ca7e9d869d5e8d7614c4dc1041eac05b9370b1d88cbca3f1d43.svg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of svg/arrow-down-big.svg.gz already exists indicating svg/arrow-down-big-7059fd0780272ca7e9d869d5e8d7614c4dc1041eac05b9370b1d88cbca3f1d43.svg.gz did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/button.png already exists indicating mercury/button-4b456e49e6c017d53be594d467c4508368dbe32ea0fd52a4b0718d5dc1862d51.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/loading-light.gif already exists indicating mercury/loading-light-7308a23ed7c1266d64dddd6a1e88fcc39860018f2c65e7044e1c043de09bdbc9.gif did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/loading-dark.gif already exists indicating mercury/loading-dark-5d40c6b1b701dea50e025059f2c4631b608e78d43aa5d07f61d47ce4c19916cd.gif did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/close.png already exists indicating mercury/close-17e1977137c8d19334573c7add2e7ab505ef55e08b5c9e6e8714bd8ad75735a9.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/search-icon.png already exists indicating mercury/search-icon-f6051996314403ca696b848a7b399f4ce82add4cae2295ca76d057e810bf00c3.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/temp-logo.png already exists indicating mercury/temp-logo-473e58648e2b483c9a9362b218d07c5970d0c71e4976de070f613f78b36776f8.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/toolbar/primary/_pressed.png already exists indicating mercury/toolbar/primary/_pressed-187fbd12bd2652e8ae288deceac6615a9ca0d39e5772245f0a2bae10a41490be.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/toolbar/primary/_expander.png already exists indicating mercury/toolbar/primary/_expander-3fc887027da136d0d0e6fcbcddb53c712482e0a49ea12a6cf164f562ed6b8af9.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/toolbar/primary/save.png already exists indicating mercury/toolbar/primary/save-ab76f721baebde3a0bcc51aefd58e8b839c91013605ee267674fa5fa215d38a1.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/toolbar/primary/preview.png already exists indicating mercury/toolbar/primary/preview-a29118005d3cc60fcd6013a664f9efc666d647ffec81213c2b109c2b823b0f2f.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/toolbar/primary/undo.png already exists indicating mercury/toolbar/primary/undo-760e7a69e732acd6d45c4079c0889f8e730f83d1ed98d3f019fc91dba6f0b742.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/toolbar/primary/redo.png already exists indicating mercury/toolbar/primary/redo-a9e3a7465503952fcfc550b20d93cd217a03fc043404ff251da66d12a804faef.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/toolbar/primary/insertlink.png already exists indicating mercury/toolbar/primary/insertlink-38b13cbc2c9a2327f19c4fc1216de19e218045ba61e023abe85c5f866b4f859f.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/toolbar/primary/insertmedia.png already exists indicating mercury/toolbar/primary/insertmedia-f478374254566f5a80d341b94e50500119b7087d7154a3638e68adf4defdecde.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/toolbar/primary/inserttable.png already exists indicating mercury/toolbar/primary/inserttable-564ff7f3509a46cf16516dcfbc6d635d8ef5eec8f31f1e5c436613b5bd867c19.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/toolbar/primary/insertcharacter.png already exists indicating mercury/toolbar/primary/insertcharacter-3f239652c47093d4108c0a41429a102b69e72629ee14348dbed1f279ed20f8d7.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/toolbar/primary/snippetpanel.png already exists indicating mercury/toolbar/primary/snippetpanel-e83ad0c761a6626a24054468fb6ff518a23f53a85388efe696572de99fc5eb67.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/toolbar/primary/historypanel.png already exists indicating mercury/toolbar/primary/historypanel-50b4715262c6310d015f8bf66edbd1157deb2bbfcbb962ff29435e9fe155053f.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/toolbar/primary/notespanel.png already exists indicating mercury/toolbar/primary/notespanel-3cf7e355711aebf12f5bc7605701ff67935401b022169ed76a34db1da0eb9973.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/toolbar/primary/user.png already exists indicating mercury/toolbar/primary/user-2c887f981109f6e7edb270fcd8df988af126d74d2d9f27c3d4a05df8944dc5de.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/toolbar/primary/tools.png already exists indicating mercury/toolbar/primary/tools-9a187661ce4f231b65b560ab097efcd70d059aa19d0cad93635089c62deef033.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/toolbar/editable/buttons.png already exists indicating mercury/toolbar/editable/buttons-470385be442a25b46beefc15ac2a1eafacdc9633fa5cbefbccf99d762ec38f5d.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of mercury/toolbar/snippets/buttons.png already exists indicating mercury/toolbar/snippets/buttons-3600fb2a519a8c3c25742b2b5a442a058c9649ee229e1abaec535eeb7a9c0b3c.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of fontawesome-webfont.svg already exists indicating fontawesome-webfont-f2bbd57a5830d1a10dbe1e856f7f01930d43a5a8b8c46383872c8036dc34d633.svg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of fontawesome-webfont.svg.gz already exists indicating fontawesome-webfont-f2bbd57a5830d1a10dbe1e856f7f01930d43a5a8b8c46383872c8036dc34d633.svg.gz did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of Available_on_the_App_Store_Badge_el_135x40.svg already exists indicating Available_on_the_App_Store_Badge_el_135x40-f72ed2a1659a01baa6ba5f70ea95e48cf1a1880ca6ebee5390828b64086c3c35.svg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of Available_on_the_App_Store_Badge_el_135x40.svg.gz already exists indicating Available_on_the_App_Store_Badge_el_135x40-f72ed2a1659a01baa6ba5f70ea95e48cf1a1880ca6ebee5390828b64086c3c35.svg.gz did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of Available_on_the_App_Store_Badge_en_135x40.svg already exists indicating Available_on_the_App_Store_Badge_en_135x40-3c7813c9623e5d318422a0079233bcb70e84f1b052d04835e696fac05045c84b.svg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of Available_on_the_App_Store_Badge_en_135x40.svg.gz already exists indicating Available_on_the_App_Store_Badge_en_135x40-3c7813c9623e5d318422a0079233bcb70e84f1b052d04835e696fac05045c84b.svg.gz did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of Available_on_the_App_Store_Badge_es_135x40.svg already exists indicating Available_on_the_App_Store_Badge_es_135x40-9e2fd3816a37be5bcf4cd0ab27975b40194fa4a6a0015625e7c16fda1131fe62.svg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of Available_on_the_App_Store_Badge_es_135x40.svg.gz already exists indicating Available_on_the_App_Store_Badge_es_135x40-9e2fd3816a37be5bcf4cd0ab27975b40194fa4a6a0015625e7c16fda1131fe62.svg.gz did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of Available_on_the_App_Store_Badge_fi_135x40.svg already exists indicating Available_on_the_App_Store_Badge_fi_135x40-aa810387e4fe1edf79e66e3b5d0dd6d89f10495007ed2c2bff5a21d6a129d7da.svg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of Available_on_the_App_Store_Badge_fi_135x40.svg.gz already exists indicating Available_on_the_App_Store_Badge_fi_135x40-aa810387e4fe1edf79e66e3b5d0dd6d89f10495007ed2c2bff5a21d6a129d7da.svg.gz did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of Available_on_the_App_Store_Badge_fr_135x40.svg already exists indicating Available_on_the_App_Store_Badge_fr_135x40-b27de55ec902e03bf673790e5bc0636000623e962a6a365fe46a90e2d10cc5e9.svg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of Available_on_the_App_Store_Badge_fr_135x40.svg.gz already exists indicating Available_on_the_App_Store_Badge_fr_135x40-b27de55ec902e03bf673790e5bc0636000623e962a6a365fe46a90e2d10cc5e9.svg.gz did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of Available_on_the_App_Store_Badge_ru_135x40.svg already exists indicating Available_on_the_App_Store_Badge_ru_135x40-75e8dfb2485ee943f043166291e03c83dcb50cd079c9ca0afc696b57ad280862.svg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of Available_on_the_App_Store_Badge_ru_135x40.svg.gz already exists indicating Available_on_the_App_Store_Badge_ru_135x40-75e8dfb2485ee943f043166291e03c83dcb50cd079c9ca0afc696b57ad280862.svg.gz did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of ajax-loader-grey.gif already exists indicating ajax-loader-grey-8dee22e67953eaf1c67bcbad102f79081cd97807d06964d3d8c6780a0f4fda43.gif did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of avatar.png already exists indicating avatar-8289991b8d2fd3d3a70cb219a97db03290288f09533e1fa76c0d4947a73f90ad.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of cc-badge-powevered-by-paypal.png already exists indicating cc-badge-powevered-by-paypal-3c8957e90f7b80ccb30937554af18cdc480e38301c1734f106867239dd83da76.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of cc-badge-powevered-by-stripe-and-paypal.png already exists indicating cc-badge-powevered-by-stripe-and-paypal-c3fcbb20b58e9bd6526bfe53d51d4c4a232c1017986b3fb8870c3a503965a524.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of cc-badge-powevered-by-stripe.png already exists indicating cc-badge-powevered-by-stripe-20348b9daf78235d4ff81f75c7ff73fd5de554790312260bb494167d3712c52a.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of checkout_with_paypal.png already exists indicating checkout_with_paypal-f53dd2e28fa75b829a63b0bdfa6ebf9f8c245ff44eafe5efcf7ab463dd4db33e.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of cover_photos/original/cover6.jpg already exists indicating cover_photos/original/cover6-0f53da11e7fc492c0f683f86228788f3e6932ada58fe7f4d8105266047436749.jpg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of css_themes/ui-bg_diagonals-small_0_aaaaaa_40x40.png already exists indicating css_themes/ui-bg_diagonals-small_0_aaaaaa_40x40-6757ebba80ac31d21840a072d2d9260013d1733d77f04bceb615215b757d14ca.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of css_themes/ui-bg_diagonals-thick_15_444444_40x40.png already exists indicating css_themes/ui-bg_diagonals-thick_15_444444_40x40-ee5cdfba3b24d2394691c4b53a9c7261d304c0187d60a74bfe9fc1557c7d0886.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of css_themes/ui-bg_diagonals-thick_95_ffdc2e_40x40.png already exists indicating css_themes/ui-bg_diagonals-thick_95_ffdc2e_40x40-a4e681c542f3001e9ce7d2ba9dc8ad12154fec8b958850e754627361fe4bbfd7.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of css_themes/ui-bg_glass_55_fbf5d0_1x400.png already exists indicating css_themes/ui-bg_glass_55_fbf5d0_1x400-d4d83b3cc5bd2c723fcfd9116887b131e34ea656188a9d19f562d3ef18f4487a.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of css_themes/ui-bg_highlight-soft_33_d45207_1x100.png already exists indicating css_themes/ui-bg_highlight-soft_33_d45207_1x100-89c7011d542cccbc513e6d116ceed5e825e8d4e4ff65bfede97ed09599b31b8f.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of css_themes/ui-bg_highlight-soft_40_d45207_1x100.png already exists indicating css_themes/ui-bg_highlight-soft_40_d45207_1x100-472a4852bf908d3439d96435a544de7e64b4eeaba837c64a0299e04eeeef66ba.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of css_themes/ui-bg_highlight-soft_40_e77148_1x100.png already exists indicating css_themes/ui-bg_highlight-soft_40_e77148_1x100-b76e6ea8eb57102ae24c71125cceb604c36ae9d488af4a45dc961f1216aabfb9.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of css_themes/ui-bg_inset-soft_10_ffffff_1x100.png already exists indicating css_themes/ui-bg_inset-soft_10_ffffff_1x100-020a9e662a78460b238896ee0b26e276d2e10bf11544f07d8cf9b205492c4cca.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of css_themes/ui-bg_inset-soft_30_e77148_1x100.png already exists indicating css_themes/ui-bg_inset-soft_30_e77148_1x100-0e67e41f0b694e671864560ce2c637d5cafe8e25cb904f28b158fc5f40d168af.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of css_themes/ui-icons_223f05_256x240.png already exists indicating css_themes/ui-icons_223f05_256x240-023b557976d179fc77a19a8ea8eda75043e049da77057517f1f383adef2148f2.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of css_themes/ui-icons_4eb305_256x240.png already exists indicating css_themes/ui-icons_4eb305_256x240-8681ebe791f1a78843f453effa56b69e4d07ccdfdbc30ec1164464e0aadc2eaf.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of css_themes/ui-icons_cd0a0a_256x240.png already exists indicating css_themes/ui-icons_cd0a0a_256x240-53f9f6be37d5c395c125a53dbf39c697fc3e5fd44a5f09f0d99710910f840dd6.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of css_themes/ui-icons_ffffff_256x240.png already exists indicating css_themes/ui-icons_ffffff_256x240-5481ff09a63fde681b23c842a9acd3181b6998dc711f675c529f028dd3020ad5.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of design/landscape_almost_square.png already exists indicating design/landscape_almost_square-a00ab507fe01f210c0597524376e639561d385fe7e6c30623c4565d704b182f4.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of design/landscape_large.png already exists indicating design/landscape_large-8071c04ef59fb0ab06dbf726343f4d160b5784ba060d2c28673e242bd5f2dacf.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of design/landscape_small.png already exists indicating design/landscape_small-500700ad589bb56191dccca1d45f6c396b99146aef25394d674da8d9709cac35.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of design/portrait_almost_square.png already exists indicating design/portrait_almost_square-aa59419aa12d629ce90f69cd58aa1298422014392cd273fd9817d322213bae20.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of design/portrait_large.png already exists indicating design/portrait_large-fa4a109bf5499d559d2b39cd42b7b7711b2e0cc085da2c8c293f21b6cc6087cc.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of design/portrait_small.png already exists indicating design/portrait_small-c053665e4ccef061ecc7addac7de7efceb185163ef7ce16850ae1678028279f8.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of empty_3x2.gif already exists indicating empty_3x2-0e10b5290d3c15c6968cce3ecdb30c014b8f42445e6bf4e66a03300c98a2d705.gif did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of gap-logo.png already exists indicating gap-logo-669120982e1114e36c7488ac421d2ad7141d92aad7f31661cd50221366e6f462.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of listing_image/processing.png already exists indicating listing_image/processing-8b6fcd21f423053a246fcb8d5a6790d7ac415c922374d30f24675a4430032d95.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of logos/full/default-highres.png already exists indicating logos/full/default-highres-7adac2967e5f5714365e0573c1a4c3bcca683c1f56b3b959778872168e5d8d0c.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of logos/full/default.png already exists indicating logos/full/default-a7588cc5f4c9ed923ca18f0e4d5f6accce93ea35215a102c2eb0fce6004c5ae4.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of logos/header/default-highres.png already exists indicating logos/header/default-highres-7adac2967e5f5714365e0573c1a4c3bcca683c1f56b3b959778872168e5d8d0c.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of logos/header/default.png already exists indicating logos/header/default-a7588cc5f4c9ed923ca18f0e4d5f6accce93ea35215a102c2eb0fce6004c5ae4.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of logos/mobile/default-highres.png already exists indicating logos/mobile/default-highres-17960e217f867a0cd0a27e2cdff3086f90d9a40b4d322e442ef9405a0ec7955e.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of logos/mobile/default.png already exists indicating logos/mobile/default-a4c2042b99d838efe882eec6681264790778df2c9e108129f732abd5082ea8b8.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of map_icons/favor_offer.png already exists indicating map_icons/favor_offer-8f410911b9c8b7d4f4759bc95ae622dd7e7e9ecd73440b93e86fe11172c17b40.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of map_icons/favor_request.png already exists indicating map_icons/favor_request-d3cce2f087a6608845dfadc957c2bca51ed3613e6b2ab5158b74e5027c133d0b.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of map_icons/flag_rideshare.png already exists indicating map_icons/flag_rideshare-582d979423d929af74bda63bddab2f8d48898ed83ad9c8345f81e863aefb2fb3.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of map_icons/group_all.png already exists indicating map_icons/group_all-6b330fa94e97f85e6b44f62db438f2e37323b2f90609090bdbe10de755aacc47.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of map_icons/group_offer.png already exists indicating map_icons/group_offer-a7610f96cc36bba80f96a024685c6176d2fee3d0cf6ca294d1ec5d0b057bd540.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of map_icons/group_request.png already exists indicating map_icons/group_request-c8a0784e487916b42648652097d73da69221f512fbd76d75aed61e52262bfe36.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of map_icons/housing_offer.png already exists indicating map_icons/housing_offer-58e7e35c139ab64781d0019d01f66329ff7c30774cec4329c2ff80263d45bc07.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of map_icons/housing_request.png already exists indicating map_icons/housing_request-572b9091537ba71ce265476cde7f38c40f55f48279bda78f1db00f050745d3f4.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of map_icons/item_offer.png already exists indicating map_icons/item_offer-e5634fb49310d4fe6a545bfc8b5fd34c6006f5b927097b4ab0acbcee4929b2f3.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of map_icons/item_request.png already exists indicating map_icons/item_request-a2148991ba3ea61f1a173c9db9bfa62b29d0ddd84ac2466abc8aa5b1bd6cadf8.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of map_icons/map_icon_dark_empty.png already exists indicating map_icons/map_icon_dark_empty-7c8e92153de2c39a5e9b042a20e646d3bb4a70f240828ef13567b5c6b8963bda.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of map_icons/map_icon_light_empty.png already exists indicating map_icons/map_icon_light_empty-9baab572572d3d36a74d04926f9648fc262a6dcafbfa36f481640453f97535fb.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of map_icons/rideshare_offer.png already exists indicating map_icons/rideshare_offer-66dec8d921c1d6cfa25608deac483351864645e2966cb6b2b7548ec493225bee.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of map_icons/rideshare_request.png already exists indicating map_icons/rideshare_request-4b3f41a3772773d9986d40b8e99b8ea0b7600ad7a116f992a145865dc8c5ed67.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of new-design/sharetribe-logo-icon.png already exists indicating new-design/sharetribe-logo-icon-ad031ba33700bc7cd4aa731bc0e1fbcffc38341c390071b07839e29018084680.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of new-design/sharetribe-logo.png already exists indicating new-design/sharetribe-logo-67526c5b2d3cd205ec8b01adfb833731b9e19a1aa3ffa5ae4000cd63c10ead98.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of onboarding/success_bridge@2x.png already exists indicating onboarding/success_bridge@2x-b465b09b3db6b269e5da2bb28ea7f026f5ccb95b5d6aeb181508103e7f9739cb.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of onboarding/success_castle@2x.png already exists indicating onboarding/success_castle@2x-e5cce1bc8b8f8a7cf273742daa8cadd7ecf3aceae9e9a9e23199586e79e96e3e.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of onboarding/success_home@2x.png already exists indicating onboarding/success_home@2x-9c8a01ccd0ac33160ce73d5c4969fb205591348244aabcb5f444700a663fc0e8.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of onboarding/success_hotairballoon@2x.png already exists indicating onboarding/success_hotairballoon@2x-9cbacf18a92d516eb1dbac2fa3208279f9a5fc917280da44540f810186cb391c.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of onboarding/success_magicWand@2x.png already exists indicating onboarding/success_magicWand@2x-6d0f6d1b4801f0d6626e22e76cd4139571101bc39eeef318ff941cb43fc2766e.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of onboarding/success_mountain@2x.png already exists indicating onboarding/success_mountain@2x-cb00fc6ca4a1b2718c0afa535e570e5fcf67395d9fcc19a031ad67035ec518a7.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of onboarding/success_music@2x.png already exists indicating onboarding/success_music@2x-7fb7cc37f6acb8878f7b6b196ada7a85e31bdbceffc777249a07880110d51a8a.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of onboarding/success_party@2x.png already exists indicating onboarding/success_party@2x-264f525118cc76167eaa22929b3f9ae0d229f4b5d81302aab02fb506d15b9af9.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of onboarding/success_rocket@2x.png already exists indicating onboarding/success_rocket@2x-0f6d0f3a2b3fef0fe06f6a6a23a91885d80ece42e665b8cc0c26d48f35a9ac15.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of onboarding/success_ufo@2x.png already exists indicating onboarding/success_ufo@2x-81939e1105afcaf4a9ff02eb70ad44749b6c8ee30d0caacdf6f84b6fff8e2839.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of organizations/medium/default.png already exists indicating organizations/medium/default-3c54ccb23ab1f28c5441f9974e850f5a72b2958766cf43ab1efb561e42dd5a11.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of payments/cc-badges-ppmcvdam.png already exists indicating payments/cc-badges-ppmcvdam-fa006fcd18f4c7b6be0c292fb1a1b2e05af24d0b9ddcdd6d6d51f1d0df2a2e5e.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of powered_by_stripe.png already exists indicating powered_by_stripe-91f16715b14a4288bf343581ac7794bf6c088ecd5d148d5b190c5e70b0c964d4.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of profile_image/medium/missing.png already exists indicating profile_image/medium/missing-c54f2181aa6b87c9c74bbe1ed8876086c314ffcf318441f2f7d70daf736fc3f2.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of profile_image/small/missing.png already exists indicating profile_image/small/missing-cced9224e83e132981635bd0461eee0c9925a16869366487b3d6c77f7e8799e8.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of profile_image/thumb/missing.png already exists indicating profile_image/thumb/missing-2103b8402da301387627aaea4ce27451dedbd0f6aa0cf7850759a0a8b368375e.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of sharetribe_icon.png already exists indicating sharetribe_icon-4e4b2840237101839ed20fa4d1babbb10d7e871207edb745676788a10d1580fa.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of small_loader.gif already exists indicating small_loader-4d178827e6953aa705cefe395a4542d75f4904b5f4e599b336deaa27cdfa2cc5.gif did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of sprite.png already exists indicating sprite-72259bf94b6849ed93a960ff800d118f610ccac4d9447658987da0f429f5fbd5.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of stripe_logo.png already exists indicating stripe_logo-8b3aa724df98bb2de7621e822a3e10148eaabe4d03a732f3a627c3b8a79dd89e.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of svg/edit.svg already exists indicating svg/edit-101cb78547e79a1af713caf62ea315f66d41300c9eee55e7734ff7ede0f82704.svg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of svg/edit.svg.gz already exists indicating svg/edit-101cb78547e79a1af713caf62ea315f66d41300c9eee55e7734ff7ede0f82704.svg.gz did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of svg/hamburger-menu.svg already exists indicating svg/hamburger-menu-be62b311e507bdbb563bad3eb38aeaaa53755ba88c0a8995f28b4bc9c260ea1a.svg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of svg/hamburger-menu.svg.gz already exists indicating svg/hamburger-menu-be62b311e507bdbb563bad3eb38aeaaa53755ba88c0a8995f28b4bc9c260ea1a.svg.gz did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of iconSquare@2x-bf15c9d930ef46b36623f32f09750b41.png already exists indicating iconSquare@2x-bf15c9d930ef46b36623f32f09750b41-c2e9e28aed76a7a8bfe1e902d809820d358f3c175f5f2a6dbc65b32ea4393ad2.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of iconSquareChecked@2x-b460297a03434c915aedab4c95233c9d.png already exists indicating iconSquareChecked@2x-b460297a03434c915aedab4c95233c9d-0d3e7921bc4463bc5f8e1fb15dff1be4e508cd17d0ab9f64e211fc0e29e94082.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of step2_sloganDescription-b19a5e558e3d56b5334dcfe55e3c036c.jpg already exists indicating step2_sloganDescription-b19a5e558e3d56b5334dcfe55e3c036c-1bf7b6f5a731beb3e03d96ecd1c85974f15001bb792373333f11c827b383a003.jpg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of step3_coverPhoto-785cdefbdbdbc78f2cb3e59743e9298b.jpg already exists indicating step3_coverPhoto-785cdefbdbdbc78f2cb3e59743e9298b-a729dea91aab57e0370f4e71de76d99b7484a5ac5da2273aabd06a95c09d6cbe.jpg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of step4_fieldsFilters-4203c725b71275066cab9884795775f0.jpg already exists indicating step4_fieldsFilters-4203c725b71275066cab9884795775f0-912dd72c1147f5b966075ab0ac0323dec1532fdf26e9d326792420470d490b7a.jpg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of step5_screenshot_paypal@2x-e270d0bedc9a7786f6d22208a8e7efc2.png already exists indicating step5_screenshot_paypal@2x-e270d0bedc9a7786f6d22208a8e7efc2-ebc7da1f5b5ef32e0b94a3e72974cafb9f9abd17059120d1f0c9475667d1fef6.png did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of step6_addListing-95c1db46186bcf7e7e93366347b92103.jpg already exists indicating step6_addListing-95c1db46186bcf7e7e93366347b92103-6729ff426c5c094c8b0b12d53f3522bf9fc01625323a28f1ff45cd4eef87198d.jpg did not change.
+ DEBUG [6cd68b77] 	React On Rails: Digested version of step7_screenshot_share@2x-04dd5ab19e53d37a1ba1a2a6f765c719.png already exists indicating step7_screenshot_share@2x-04dd5ab19e53d37a1ba1a2a6f765c719-f4410740d339f718bd5c139a227c14981c79bcb447210a7b956202787e024491.png did not change.
+  INFO [6cd68b77] Finished in 47.061 seconds with exit status 0 (successful).
+ DEBUG [4366d682] Running if test ! -d /home/ubuntu/var/www/quicker_books/releases/20200727143716; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/releases/20200727143716'" 1>&2; false; fi as ubuntu@54.148.174.247
+ DEBUG [4366d682] Command: if test ! -d /home/ubuntu/var/www/quicker_books/releases/20200727143716; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/releases/20200727143716'" 1>&2; false; fi
+ DEBUG [4366d682] Finished in 1.057 seconds with exit status 0 (successful).
+  INFO [9c2a95e8] Running /usr/bin/env mkdir -p /home/ubuntu/var/www/quicker_books/releases/20200727143716/assets_manifest_backup as ubuntu@54.148.174.247
+ DEBUG [9c2a95e8] Command: cd /home/ubuntu/var/www/quicker_books/releases/20200727143716 && /usr/bin/env mkdir -p /home/ubuntu/var/www/quicker_books/releases/20200727143716/assets_manifest_backup
+  INFO [9c2a95e8] Finished in 1.033 seconds with exit status 0 (successful).
+ DEBUG [9ee2413e] Running /usr/bin/env ls /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/assets/.sprockets-manifest* as ubuntu@54.148.174.247
+ DEBUG [9ee2413e] Command: cd /home/ubuntu/var/www/quicker_books/releases/20200727143716 && /usr/bin/env ls /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/assets/.sprockets-manifest*
+ DEBUG [9ee2413e] 	/home/ubuntu/var/www/quicker_books/releases/20200727143716/public/assets/.sprockets-manifest-2857056b0d9f2f0bfddfc290c00beb3d.json
+ DEBUG [9ee2413e] Finished in 0.920 seconds with exit status 0 (successful).
+ DEBUG [c615ef43] Running /usr/bin/env ls /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/assets/.sprockets-manifest* as ubuntu@54.148.174.247
+ DEBUG [c615ef43] Command: cd /home/ubuntu/var/www/quicker_books/releases/20200727143716 && /usr/bin/env ls /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/assets/.sprockets-manifest*
+ DEBUG [c615ef43] 	/home/ubuntu/var/www/quicker_books/releases/20200727143716/public/assets/.sprockets-manifest-2857056b0d9f2f0bfddfc290c00beb3d.json
+ DEBUG [c615ef43] Finished in 1.021 seconds with exit status 0 (successful).
+  INFO [2d625d90] Running /usr/bin/env cp /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/assets/.sprockets-manifest-2857056b0d9f2f0bfddfc290c00beb3d.json /home/ubuntu/var/www/quicker_books/releases/20200727143716/assets_manifest_backup as ubuntu@54.148.174.247
+ DEBUG [2d625d90] Command: cd /home/ubuntu/var/www/quicker_books/releases/20200727143716 && /usr/bin/env cp /home/ubuntu/var/www/quicker_books/releases/20200727143716/public/assets/.sprockets-manifest-2857056b0d9f2f0bfddfc290c00beb3d.json /home/ubuntu/var/www/quicker_books/releases/20200727143716/assets_manifest_backup
+  INFO [2d625d90] Finished in 0.919 seconds with exit status 0 (successful).
+  INFO [23261439] Running /usr/bin/env ln -s /home/ubuntu/var/www/quicker_books/releases/20200727143716 /home/ubuntu/var/www/quicker_books/releases/current as ubuntu@54.148.174.247
+ DEBUG [23261439] Command: /usr/bin/env ln -s /home/ubuntu/var/www/quicker_books/releases/20200727143716 /home/ubuntu/var/www/quicker_books/releases/current
+  INFO [23261439] Finished in 1.110 seconds with exit status 0 (successful).
+  INFO [a1b8acce] Running /usr/bin/env mv /home/ubuntu/var/www/quicker_books/releases/current /home/ubuntu/var/www/quicker_books as ubuntu@54.148.174.247
+ DEBUG [a1b8acce] Command: /usr/bin/env mv /home/ubuntu/var/www/quicker_books/releases/current /home/ubuntu/var/www/quicker_books
+  INFO [a1b8acce] Finished in 0.931 seconds with exit status 0 (successful).
+ DEBUG [39eb1259] Running /usr/bin/env ls -x /home/ubuntu/var/www/quicker_books/releases as ubuntu@54.148.174.247
+ DEBUG [39eb1259] Command: /usr/bin/env ls -x /home/ubuntu/var/www/quicker_books/releases
+ DEBUG [39eb1259] 	20200630085901	20200630090038	20200702194506	20200723151134	20200727140410
+20200727143716
+ DEBUG [39eb1259] Finished in 1.021 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 54.148.174.247
+ DEBUG [c3fe70b9] Running [ -d /home/ubuntu/var/www/quicker_books/current ] as ubuntu@54.148.174.247
+ DEBUG [c3fe70b9] Command: [ -d /home/ubuntu/var/www/quicker_books/current ]
+ DEBUG [c3fe70b9] Finished in 1.014 seconds with exit status 0 (successful).
+ DEBUG [1b5dc00c] Running /usr/bin/env readlink /home/ubuntu/var/www/quicker_books/current as ubuntu@54.148.174.247
+ DEBUG [1b5dc00c] Command: /usr/bin/env readlink /home/ubuntu/var/www/quicker_books/current
+ DEBUG [1b5dc00c] 	/home/ubuntu/var/www/quicker_books/releases/20200727143716
+ DEBUG [1b5dc00c] Finished in 0.997 seconds with exit status 0 (successful).
+  INFO [75a18431] Running /usr/bin/env rm -rf /home/ubuntu/var/www/quicker_books/releases/20200630085901 as ubuntu@54.148.174.247
+ DEBUG [75a18431] Command: /usr/bin/env rm -rf /home/ubuntu/var/www/quicker_books/releases/20200630085901
+  INFO [75a18431] Finished in 1.254 seconds with exit status 0 (successful).
+ DEBUG [0ff761d1] Running if test ! -d /home/ubuntu/var/www/quicker_books/releases; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/releases'" 1>&2; false; fi as ubuntu@54.148.174.247
+ DEBUG [0ff761d1] Command: if test ! -d /home/ubuntu/var/www/quicker_books/releases; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/releases'" 1>&2; false; fi
+ DEBUG [0ff761d1] Finished in 1.028 seconds with exit status 0 (successful).
+  INFO [90919313] Running /usr/bin/env echo "Branch staging (at 021b2d0c65dc225891b607b52d70f9a8cf6ba0fc) deployed as release 20200727143716 by alihassan" >> /home/ubuntu/var/www/quicker_books/revisions.log as ubuntu@54.148.174.247
+ DEBUG [90919313] Command: cd /home/ubuntu/var/www/quicker_books/releases && /usr/bin/env echo "Branch staging (at 021b2d0c65dc225891b607b52d70f9a8cf6ba0fc) deployed as release 20200727143716 by alihassan" >> /home/ubuntu/var/www/quicker_books/revisions.log
+  INFO [90919313] Finished in 0.915 seconds with exit status 0 (successful).
+ DEBUG [f6c5e924] Running if test ! -d /home/ubuntu/var/www/quicker_books/current; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/current'" 1>&2; false; fi as ubuntu@54.148.174.247
+ DEBUG [f6c5e924] Command: if test ! -d /home/ubuntu/var/www/quicker_books/current; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/current'" 1>&2; false; fi
+ DEBUG [f6c5e924] Finished in 1.020 seconds with exit status 0 (successful).
+ DEBUG [b26f0d27] Running [ -f /home/ubuntu/var/www/quicker_books/shared/tmp/pids/puma.pid ] as ubuntu@54.148.174.247
+ DEBUG [b26f0d27] Command: [ -f /home/ubuntu/var/www/quicker_books/shared/tmp/pids/puma.pid ]
+ DEBUG [b26f0d27] Finished in 0.885 seconds with exit status 0 (successful).
+ DEBUG [67fc6de9] Running /usr/bin/env kill -0 $( cat /home/ubuntu/var/www/quicker_books/shared/tmp/pids/puma.pid ) as ubuntu@54.148.174.247
+ DEBUG [67fc6de9] Command: cd /home/ubuntu/var/www/quicker_books/current && ( export RACK_ENV="production" ; /usr/bin/env kill -0 $( cat /home/ubuntu/var/www/quicker_books/shared/tmp/pids/puma.pid ) )
+ DEBUG [67fc6de9] Finished in 0.959 seconds with exit status 0 (successful).
+  INFO [3135cbef] Running ~/.rvm/bin/rvm default do bundle exec pumactl -S /home/ubuntu/var/www/quicker_books/shared/tmp/pids/puma.state -F /home/ubuntu/var/www/quicker_books/shared/config/puma.rb restart as ubuntu@54.148.174.247
+ DEBUG [3135cbef] Command: cd /home/ubuntu/var/www/quicker_books/current && ( export RACK_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec pumactl -S /home/ubuntu/var/www/quicker_books/shared/tmp/pids/puma.state -F /home/ubuntu/var/www/quicker_books/shared/config/puma.rb restart )
+ DEBUG [3135cbef] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/var/www/quicker_books/current/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+ DEBUG [3135cbef] 	Command restart sent success
+  INFO [3135cbef] Finished in 1.793 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-07-27 19:52:38 +0500 cap production puma:restart
+  INFO ---------------------------------------------------------------------------
+ DEBUG [0b80786d] Running [ -d ~/.rvm ] as ubuntu@54.148.174.247
+ DEBUG [0b80786d] Command: [ -d ~/.rvm ]
+ DEBUG [0b80786d] Finished in 3.597 seconds with exit status 0 (successful).
+ DEBUG [d8a2898f] Running ~/.rvm/bin/rvm version as ubuntu@54.148.174.247
+ DEBUG [d8a2898f] Command: ~/.rvm/bin/rvm version
+ DEBUG [d8a2898f] 	rvm 1.29.10 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [d8a2898f] Finished in 1.135 seconds with exit status 0 (successful).
+ DEBUG [f28fdea5] Running ~/.rvm/bin/rvm current as ubuntu@54.148.174.247
+ DEBUG [f28fdea5] Command: ~/.rvm/bin/rvm current
+ DEBUG [f28fdea5] 	ruby-2.6.5
+ DEBUG [f28fdea5] Finished in 1.228 seconds with exit status 0 (successful).
+ DEBUG [2954a03c] Running ~/.rvm/bin/rvm default do ruby --version as ubuntu@54.148.174.247
+ DEBUG [2954a03c] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [2954a03c] 	ruby 2.6.5p114 (2019-10-01 revision 67812) [x86_64-linux]
+ DEBUG [2954a03c] Finished in 1.201 seconds with exit status 0 (successful).
+ DEBUG [2f45a5da] Running if test ! -d /home/ubuntu/var/www/quicker_books/current; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/current'" 1>&2; false; fi as ubuntu@54.148.174.247
+ DEBUG [2f45a5da] Command: if test ! -d /home/ubuntu/var/www/quicker_books/current; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/current'" 1>&2; false; fi
+ DEBUG [2f45a5da] Finished in 1.050 seconds with exit status 0 (successful).
+ DEBUG [7a500948] Running [ -f /home/ubuntu/var/www/quicker_books/shared/tmp/pids/puma.pid ] as ubuntu@54.148.174.247
+ DEBUG [7a500948] Command: [ -f /home/ubuntu/var/www/quicker_books/shared/tmp/pids/puma.pid ]
+ DEBUG [7a500948] Finished in 0.919 seconds with exit status 0 (successful).
+ DEBUG [b97d758d] Running /usr/bin/env kill -0 $( cat /home/ubuntu/var/www/quicker_books/shared/tmp/pids/puma.pid ) as ubuntu@54.148.174.247
+ DEBUG [b97d758d] Command: cd /home/ubuntu/var/www/quicker_books/current && ( export RACK_ENV="production" ; /usr/bin/env kill -0 $( cat /home/ubuntu/var/www/quicker_books/shared/tmp/pids/puma.pid ) )
+ DEBUG [b97d758d] 	kill: (16053): No such process
+ DEBUG [b97d758d] Finished in 1.025 seconds with exit status 1 (failed).
+  INFO [89f50470] Running mkdir /home/ubuntu/var/www/quicker_books/shared/tmp/sockets -p as ubuntu@54.148.174.247
+ DEBUG [89f50470] Command: mkdir /home/ubuntu/var/www/quicker_books/shared/tmp/sockets -p
+  INFO [89f50470] Finished in 0.919 seconds with exit status 0 (successful).
+  INFO [d80bf65e] Running mkdir /home/ubuntu/var/www/quicker_books/shared/tmp/pids -p as ubuntu@54.148.174.247
+ DEBUG [d80bf65e] Command: mkdir /home/ubuntu/var/www/quicker_books/shared/tmp/pids -p
+  INFO [d80bf65e] Finished in 1.025 seconds with exit status 0 (successful).
+ DEBUG [c5613fc5] Running [ -f /home/ubuntu/var/www/quicker_books/shared/config/puma.rb ] as ubuntu@54.148.174.247
+ DEBUG [c5613fc5] Command: [ -f /home/ubuntu/var/www/quicker_books/shared/config/puma.rb ]
+ DEBUG [c5613fc5] Finished in 0.920 seconds with exit status 0 (successful).
+  INFO using conf file /home/ubuntu/var/www/quicker_books/shared/config/puma.rb
+ DEBUG [747fe4e4] Running [ -f /home/ubuntu/var/www/quicker_books/shared/tmp/pids/puma.pid ] as ubuntu@54.148.174.247
+ DEBUG [747fe4e4] Command: [ -f /home/ubuntu/var/www/quicker_books/shared/tmp/pids/puma.pid ]
+ DEBUG [747fe4e4] Finished in 1.124 seconds with exit status 0 (successful).
+ DEBUG [618da921] Running /usr/bin/env kill -0 $( cat /home/ubuntu/var/www/quicker_books/shared/tmp/pids/puma.pid ) as ubuntu@54.148.174.247
+ DEBUG [618da921] Command: /usr/bin/env kill -0 $( cat /home/ubuntu/var/www/quicker_books/shared/tmp/pids/puma.pid )
+ DEBUG [618da921] 	kill: (16053): No such process
+ DEBUG [618da921] Finished in 0.925 seconds with exit status 1 (failed).
+ DEBUG [fbddc903] Running if test ! -d /home/ubuntu/var/www/quicker_books/current; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/current'" 1>&2; false; fi as ubuntu@54.148.174.247
+ DEBUG [fbddc903] Command: if test ! -d /home/ubuntu/var/www/quicker_books/current; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/current'" 1>&2; false; fi
+ DEBUG [fbddc903] Finished in 1.020 seconds with exit status 0 (successful).
+  INFO [c1d25dc9] Running ~/.rvm/bin/rvm default do bundle exec puma -C /home/ubuntu/var/www/quicker_books/shared/config/puma.rb --daemon as ubuntu@54.148.174.247
+ DEBUG [c1d25dc9] Command: cd /home/ubuntu/var/www/quicker_books/current && ( export RACK_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec puma -C /home/ubuntu/var/www/quicker_books/shared/config/puma.rb --daemon )
+ DEBUG [c1d25dc9] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/var/www/quicker_books/current/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+ DEBUG [c1d25dc9] 	[2482] Puma starting in cluster mode...
+[2482] * Version 3.12.4 (ruby 2.6.5-p114), codename: Llamas in Pajamas
+[2482] * Min threads: 4, max threads: 16
+ DEBUG [c1d25dc9] 	[2482] * Environment: production
+[2482] * Process workers: 3
+[2482] * Preloading application
+ DEBUG [c1d25dc9] 	/home/ubuntu/var/www/quicker_books/current/config/config_loader.rb:5: warning: already initialized constant ConfigLoader::DEFAULT_CONFIGS
+/home/ubuntu/var/www/quicker_books/releases/20200727143716/config/config_loader.rb:5: warning: previous definition of DEFAULT_CONFIGS was here
+/home/ubuntu/var/www/quicker_books/current/config/config_loader.rb:6: warning: already initialized constant ConfigLoader::USER_CONFIGS
+/home/ubuntu/var/www/quicker_books/releases/20200727143716/config/config_loader.rb:6: warning: previous definition of USER_CONFIGS was here
+ DEBUG [c1d25dc9] 	[2482] * Listening on unix:///home/ubuntu/var/www/quicker_books/shared/tmp/sockets/quicker_books-puma.sock
+[2482] ! WARNING: Detected 1 Thread(s) started in app boot:
+[2482] ! #<Thread:0x00005592a1499510@/home/ubuntu/var/www/quicker_books/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:299 sleep> - /home/ubuntu/var/www/quicker_books/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/connection_adapters/abstract/connection_pool.rb:301:in `sleep'
+ DEBUG [c1d25dc9] 	[2482] * Daemonizing...
+  INFO [c1d25dc9] Finished in 5.225 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-07-27 20:01:19 +0500 cap production puma:restart
+  INFO ---------------------------------------------------------------------------
+ DEBUG [6fc4b481] Running [ -d ~/.rvm ] as ubuntu@54.148.174.247
+ DEBUG [6fc4b481] Command: [ -d ~/.rvm ]
+ DEBUG [6fc4b481] Finished in 4.521 seconds with exit status 0 (successful).
+ DEBUG [44097d6d] Running ~/.rvm/bin/rvm version as ubuntu@54.148.174.247
+ DEBUG [44097d6d] Command: ~/.rvm/bin/rvm version
+ DEBUG [44097d6d] 	rvm 1.29.10 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [44097d6d] Finished in 1.225 seconds with exit status 0 (successful).
+ DEBUG [d404d26b] Running ~/.rvm/bin/rvm current as ubuntu@54.148.174.247
+ DEBUG [d404d26b] Command: ~/.rvm/bin/rvm current
+ DEBUG [d404d26b] 	ruby-2.6.5
+ DEBUG [d404d26b] Finished in 1.201 seconds with exit status 0 (successful).
+ DEBUG [bd298412] Running ~/.rvm/bin/rvm default do ruby --version as ubuntu@54.148.174.247
+ DEBUG [bd298412] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [bd298412] 	ruby 2.6.5p114 (2019-10-01 revision 67812) [x86_64-linux]
+ DEBUG [bd298412] Finished in 1.252 seconds with exit status 0 (successful).
+ DEBUG [9abb2d6b] Running if test ! -d /home/ubuntu/var/www/quicker_books/current; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/current'" 1>&2; false; fi as ubuntu@54.148.174.247
+ DEBUG [9abb2d6b] Command: if test ! -d /home/ubuntu/var/www/quicker_books/current; then echo "Directory does not exist '/home/ubuntu/var/www/quicker_books/current'" 1>&2; false; fi
+ DEBUG [9abb2d6b] Finished in 1.058 seconds with exit status 0 (successful).
+ DEBUG [a01b6a90] Running [ -f /home/ubuntu/var/www/quicker_books/shared/tmp/pids/puma.pid ] as ubuntu@54.148.174.247
+ DEBUG [a01b6a90] Command: [ -f /home/ubuntu/var/www/quicker_books/shared/tmp/pids/puma.pid ]
+ DEBUG [a01b6a90] Finished in 1.001 seconds with exit status 0 (successful).
+ DEBUG [a3a6aa0b] Running /usr/bin/env kill -0 $( cat /home/ubuntu/var/www/quicker_books/shared/tmp/pids/puma.pid ) as ubuntu@54.148.174.247
+ DEBUG [a3a6aa0b] Command: cd /home/ubuntu/var/www/quicker_books/current && ( export RACK_ENV="production" ; /usr/bin/env kill -0 $( cat /home/ubuntu/var/www/quicker_books/shared/tmp/pids/puma.pid ) )
+ DEBUG [a3a6aa0b] Finished in 1.009 seconds with exit status 0 (successful).
+  INFO [b7a3230f] Running ~/.rvm/bin/rvm default do bundle exec pumactl -S /home/ubuntu/var/www/quicker_books/shared/tmp/pids/puma.state -F /home/ubuntu/var/www/quicker_books/shared/config/puma.rb restart as ubuntu@54.148.174.247
+ DEBUG [b7a3230f] Command: cd /home/ubuntu/var/www/quicker_books/current && ( export RACK_ENV="production" ; ~/.rvm/bin/rvm default do bundle exec pumactl -S /home/ubuntu/var/www/quicker_books/shared/tmp/pids/puma.state -F /home/ubuntu/var/www/quicker_books/shared/config/puma.rb restart )
+ DEBUG [b7a3230f] 	[33mRVM used your Gemfile for selecting Ruby, it is all fine - Heroku does that too,
+you can ignore these warnings with 'rvm rvmrc warning ignore /home/ubuntu/var/www/quicker_books/current/Gemfile'.
+To ignore the warning for all files run 'rvm rvmrc warning ignore allGemfiles'.
+[0m
+[0m
+ DEBUG [b7a3230f] 	Command restart sent success
+ DEBUG [b7a3230f] 	
+  INFO [b7a3230f] Finished in 1.809 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-07-27 20:20:27 +0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [731faa4c] Running [ -d ~/.rvm ] as ubuntu@54.148.174.247
+ DEBUG [731faa4c] Command: [ -d ~/.rvm ]
+ DEBUG [731faa4c] Finished in 3.767 seconds with exit status 0 (successful).
+ DEBUG [51744d58] Running ~/.rvm/bin/rvm version as ubuntu@54.148.174.247
+ DEBUG [51744d58] Command: ~/.rvm/bin/rvm version
+ DEBUG [51744d58] 	rvm 1.29.10 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [51744d58] Finished in 2.462 seconds with exit status 0 (successful).
+ DEBUG [be2c6a36] Running ~/.rvm/bin/rvm current as ubuntu@54.148.174.247
+ DEBUG [be2c6a36] Command: ~/.rvm/bin/rvm current
+ DEBUG [be2c6a36] 	ruby-2.6.5
+ DEBUG [be2c6a36] Finished in 1.838 seconds with exit status 0 (successful).
+ DEBUG [b5c71e8e] Running ~/.rvm/bin/rvm default do ruby --version as ubuntu@54.148.174.247
+ DEBUG [b5c71e8e] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [b5c71e8e] 	ruby 2.6.5p114 (2019-10-01 revision 67812) [x86_64-linux]
+ DEBUG [b5c71e8e] Finished in 1.227 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2020-07-27 20:21:09 +0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [30fe55ec] Running [ -d ~/.rvm ] as ubuntu@54.148.174.247
+ DEBUG [30fe55ec] Command: [ -d ~/.rvm ]
+ DEBUG [30fe55ec] Finished in 4.091 seconds with exit status 0 (successful).
+ DEBUG [570a92e8] Running ~/.rvm/bin/rvm version as ubuntu@54.148.174.247
+ DEBUG [570a92e8] Command: ~/.rvm/bin/rvm version
+ DEBUG [570a92e8] 	rvm 1.29.10 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [570a92e8] Finished in 1.153 seconds with exit status 0 (successful).
+ DEBUG [7191ad36] Running ~/.rvm/bin/rvm current as ubuntu@54.148.174.247
+ DEBUG [7191ad36] Command: ~/.rvm/bin/rvm current
+ DEBUG [7191ad36] 	ruby-2.6.5
+ DEBUG [7191ad36] Finished in 2.432 seconds with exit status 0 (successful).
+ DEBUG [94ff6b45] Running ~/.rvm/bin/rvm default do ruby --version as ubuntu@54.148.174.247
+ DEBUG [94ff6b45] Command: ~/.rvm/bin/rvm default do ruby --version
+ DEBUG [94ff6b45] 	ruby 2.6.5p114 (2019-10-01 revision 67812) [x86_64-linux]
+ DEBUG [94ff6b45] Finished in 1.239 seconds with exit status 0 (successful).
