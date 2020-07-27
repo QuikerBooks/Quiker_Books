@@ -193,3 +193,4 @@ group :deployment do
 end
 gem 'shipppit-canada-post', :git => 'https://github.com/ali-hassan/shipppit-canada-post.git', branch: "master"
 # gem 'canada-post-api'
+gem 'puma'
