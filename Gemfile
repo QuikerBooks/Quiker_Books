@@ -182,16 +182,15 @@ gem "select2-rails"
 gem "cocoon"
 gem "fast-polylines"
 gem "puma"
+gem "capistrano", "=3.11"
+gem 'capistrano3-delayed-job', '~> 1.0'
+gem 'capistrano-ssh-doctor', '~> 1.0'
+gem 'capistrano-rvm'
+gem 'capistrano-rails',   require: false
+gem 'capistrano-bundler', require: false
+gem 'capistrano3-puma',   require: false
+gem 'capistrano-npm'
 group :deployment do
-  gem "capistrano", "=3.11"
-  gem 'capistrano3-delayed-job', '~> 1.0'
-  gem 'capistrano-ssh-doctor', '~> 1.0'
-  gem 'capistrano-rvm'
-  gem 'capistrano-rails',   require: false
-  gem 'capistrano-bundler', require: false
-  gem 'capistrano3-puma',   require: false
-  gem 'capistrano-npm'
 end
 gem 'shipppit-canada-post', :git => 'https://github.com/ali-hassan/shipppit-canada-post.git', branch: "master"
 # gem 'canada-post-api'
-gem 'puma'
