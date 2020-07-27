@@ -56,22 +56,6 @@
           = quantity
 
   - if subtotal.present?
-    .initiate-transaction-shipping-price-wrapper#insurance
-      %span.initiate-transaction-shipping-price-label
-        %span#insurance_fee Include 20$ Insurance FEE
-        = check_box_tag :checkbox_checked
-
-    .initiate-transaction-shipping-price-wrapper
-      - @rates.each do |rate|
-        .checkbox-input
-          %span.initiate-transaction-total-label
-            .modal-checkbox-block.rate_price
-              = check_box_tag :checkbox
-              %span
-                #{rate["service"]}             #{rate["carrier"]}
-          %span.initiate-transaction-total-value#price
-            %span
-              $#{rate["rate"]}
     .initiate-transaction-sum-wrapper#tx-subtotal
       %span.initiate-transaction-sum-label
         = t("transactions.initiate.subtotal")
