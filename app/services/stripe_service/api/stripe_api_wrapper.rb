@@ -13,7 +13,8 @@ class StripeService::API::StripeApiWrapper
 
     def configure_payment_for(settings)
       Stripe.api_version = API_2019_12_03
-      Stripe.api_key = TransactionService::Store::PaymentSettings.decrypt_value(settings.api_private_key, settings.key_encryption_padding)
+      # Stripe.api_key = TransactionService::Store::PaymentSettings.decrypt_value(settings.api_private_key, settings.key_encryption_padding)
+      Stripe.api_key = settings.api_private_key
     end
 
     def reset_configurations

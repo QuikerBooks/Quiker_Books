@@ -172,7 +172,8 @@ module TransactionService::Store::PaymentSettings
     end
     # store visible hint
     settings[:api_visible_private_key] = settings[:api_private_key].sub(/\A(.{7}).+(.{4})$/, '\1*********************\2')
-    settings[:api_private_key] = encrypt_value(settings[:api_private_key], settings[:key_encryption_padding])
+    settings[:api_private_key] = settings[:api_private_key]
+      # settings[:api_private_key] = encrypt_value(settings[:api_private_key], settings[:key_encryption_padding])
   end
 
   def encrypt_value(value, padding)
