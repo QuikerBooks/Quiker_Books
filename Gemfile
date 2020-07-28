@@ -172,7 +172,7 @@ gem 'redcarpet', '~> 3.4.0'
 
 gem 'intercom'
 
-# gem 'twitter_cldr'
+gem 'twitter_cldr'
 gem 'memoist'
 gem 'biz'
 gem 'ffi', '>= 1.9.25'
