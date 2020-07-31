@@ -107,17 +107,18 @@
         = check_box_tag :checkbox_checked
 
     .initiate-transaction-shipping-price-wrapper
-      - @rates.each do |rate|
-        .checkbox-input
-          %span.initiate-transaction-total-label
-            .modal-checkbox-block.rate_price
-              = check_box_tag :checkbox
+      - unless @rates.nil?
+        - @rates.each do |rate|
+          .checkbox-input
+            %span.initiate-transaction-total-label
+              .modal-checkbox-block.rate_price
+                = check_box_tag :checkbox
+                %span
+                  #{rate["service"]}             #{rate["carrier"]}
+            %span.initiate-transaction-total-value#price
               %span
-                #{rate["service"]}             #{rate["carrier"]}
-          %span.initiate-transaction-total-value#price
-            %span
-              $#{rate["rate"]}
-          %br
+                $#{rate["rate"]}
+            %br
 
     .initiate-transaction-total-wrapper
       %span.initiate-transaction-total-label
