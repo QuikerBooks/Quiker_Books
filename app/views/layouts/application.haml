@@ -44,12 +44,12 @@
             .banner--title
               = yield :banner_warning
       %section.marketplace-lander
-        - if true
+        - if @big_cover_photo
           .coverimage
             %figure.marketplace-cover.fluidratio
               .lander-content.marketplace-lander-content
                 = yield :title_header
-        - elsif !(is_homepage && FeatureFlagHelper.feature_enabled?(:topbar_v1))
+        - elsif true
           .coverimage
             %figure.marketplace-cover-small.fluidratio
             .coverimage-fade{:class => yield(:coverfade_class)}
