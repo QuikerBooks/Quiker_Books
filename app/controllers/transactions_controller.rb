@@ -506,7 +506,7 @@ class TransactionsController < ApplicationController
     -d 'shipment[from_address][street2]=#{ author_canada_post_api_hsh[:street_address] }' \
     -d 'shipment[from_address][city]=#{ author_canada_post_api_hsh[:city] }' \
     -d 'shipment[from_address][state]=#{ author_canada_post_api_hsh[:state] }' \
-    -d 'shipment[from_address][zip]=#{ author_canada_post_api_hsh[:zipcode] }' \
+    -d 'shipment[from_address][zip]=#{ author_canada_post_api_hsh[:postal_code] }' \
     -d 'shipment[from_address][country]=#{ author_canada_post_api_hsh[:country] }' \
     -d 'shipment[from_address][phone]=#{ @listing.author.phone_number }' \
     -d 'shipment[from_address][email]=#{ @listing.author.email }' \
