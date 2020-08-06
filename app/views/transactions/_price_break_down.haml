@@ -101,10 +101,10 @@
 
 
   - if total.present?
-    .initiate-transaction-shipping-price-wrapper#insurance
-      %span.initiate-transaction-shipping-price-label
-        %span#insurance_fee Include 20$ Insurance FEE
-        = check_box_tag :checkbox_checked
+    -#.initiate-transaction-shipping-price-wrapper#insurance
+    -#  %span.initiate-transaction-shipping-price-label
+    -#    %span#insurance_fee Include 20$ Insurance FEE
+    -#    = check_box_tag :checkbox_checked
 
     .initiate-transaction-shipping-price-wrapper
       - unless @rates.nil?
