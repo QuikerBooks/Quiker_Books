@@ -494,11 +494,11 @@ class TransactionsController < ApplicationController
     @rates = `curl -X POST #{ APP_CONFIG.canada_post_url } \
     -u "#{ APP_CONFIG.canada_post_api_key }": \
     -d 'shipment[to_address][name]=#{ @current_user.full_name }' \
-    -d 'shipment[to_address][street1]=#{ canada_post_api_hsh[:shipping_street] }' \
-    -d 'shipment[to_address][city]=#{ canada_post_api_hsh[:shipping_city] }' \
-    -d 'shipment[to_address][state]=#{ canada_post_api_hsh[:shipping_state] }' \
-    -d 'shipment[to_address][zip]=#{ canada_post_api_hsh[:shipping_postal] }' \
-    -d 'shipment[to_address][country]=#{ canada_post_api_hsh[:shipping_country] }' \
+    -d 'shipment[to_address][street1]=#{ canada_post_api_hsh[:street_address] }' \
+    -d 'shipment[to_address][city]=#{ canada_post_api_hsh[:city] }' \
+    -d 'shipment[to_address][state]=#{ canada_post_api_hsh[:state] }' \
+    -d 'shipment[to_address][zip]=#{ canada_post_api_hsh[:postal_code] }' \
+    -d 'shipment[to_address][country]=#{ canada_post_api_hsh[:country] }' \
     -d 'shipment[to_address][phone]=#{ @current_user.phone_number }' \
     -d 'shipment[to_address][email]=#{ @current_user.get_email }' \
     -d 'shipment[from_address][name]=#{ @listing.author.full_name }' \
